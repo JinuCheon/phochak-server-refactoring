@@ -1,7 +1,7 @@
 package com.nexters.phochak.service.impl;
 
 import com.auth0.jwt.JWT;
-import com.nexters.phochak.config.property.JwtProperties;
+import com.nexters.phochak.global.config.property.JwtProperties;
 import com.nexters.phochak.dto.TokenDto;
 import com.nexters.phochak.dto.request.ReissueTokenRequestDto;
 import com.nexters.phochak.dto.response.JwtResponseDto;

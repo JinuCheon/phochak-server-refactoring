@@ -1,6 +1,6 @@
 package com.nexters.phochak.repository.impl;
 
-import com.nexters.phochak.config.property.JwtProperties;
+import com.nexters.phochak.global.config.property.JwtProperties;
 import com.nexters.phochak.repository.RefreshTokenRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.redis.core.StringRedisTemplate;

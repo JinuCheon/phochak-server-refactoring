@@ -1,9 +1,9 @@
-package com.nexters.phochak.config;
+package com.nexters.phochak.global.config;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.List;
 
-import com.nexters.phochak.config.property.FirebaseProperties;
+import com.nexters.phochak.global.config.property.FirebaseProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

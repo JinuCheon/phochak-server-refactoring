@@ -1,4 +1,4 @@
-package com.nexters.phochak.config.property;
+package com.nexters.phochak.global.config.property;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;

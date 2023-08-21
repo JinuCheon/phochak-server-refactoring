@@ -1,4 +1,4 @@
-package com.nexters.phochak.config.property;
+package com.nexters.phochak.global.config.property;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
@@ -8,8 +8,8 @@ import org.springframework.boot.context.properties.ConstructorBinding;
 @Getter
 @RequiredArgsConstructor
 @ConstructorBinding
-@ConfigurationProperties(prefix = "firebase")
-public class FirebaseProperties {
-    private final String firebaseScope;
-    private final String privateKeyLocation;
+@ConfigurationProperties(prefix = "kakao")
+public class KakaoLoginProperties {
+    private final String clientId;
+    private final String redirectUri;
 }

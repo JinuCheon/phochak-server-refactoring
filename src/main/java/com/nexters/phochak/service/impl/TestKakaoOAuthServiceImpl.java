@@ -2,7 +2,7 @@ package com.nexters.phochak.service.impl;
 
 import com.nexters.phochak.client.KakaoAccessTokenFeignClient;
 import com.nexters.phochak.client.KakaoInformationFeignClient;
-import com.nexters.phochak.config.property.KakaoLoginProperties;
+import com.nexters.phochak.global.config.property.KakaoLoginProperties;
 import com.nexters.phochak.dto.KakaoAccessTokenResponseDto;
 import com.nexters.phochak.dto.OAuthUserInformation;
 import com.nexters.phochak.service.OAuthService;

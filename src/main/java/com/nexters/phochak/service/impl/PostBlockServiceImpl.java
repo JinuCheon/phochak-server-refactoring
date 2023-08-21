@@ -1,7 +1,7 @@
 package com.nexters.phochak.service.impl;
 
 import com.nexters.phochak.client.SlackPostReportFeignClient;
-import com.nexters.phochak.config.property.SlackReportProperties;
+import com.nexters.phochak.global.config.property.SlackReportProperties;
 import com.nexters.phochak.dto.SlackMessageFormDto;
 import com.nexters.phochak.repository.PostRepository;
 import com.nexters.phochak.repository.ReportPostRepository;

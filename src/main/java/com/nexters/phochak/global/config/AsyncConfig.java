@@ -1,4 +1,4 @@
-package com.nexters.phochak.config;
+package com.nexters.phochak.global.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

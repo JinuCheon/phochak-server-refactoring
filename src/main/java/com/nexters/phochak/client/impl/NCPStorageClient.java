@@ -8,7 +8,7 @@ import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.AmazonS3ClientBuilder;
 import com.amazonaws.services.s3.model.DeleteObjectsRequest;
 import com.nexters.phochak.client.StorageBucketClient;
-import com.nexters.phochak.config.property.NCPStorageProperties;
+import com.nexters.phochak.global.config.property.NCPStorageProperties;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
