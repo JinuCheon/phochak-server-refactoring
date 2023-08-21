@@ -1,6 +1,6 @@
 package com.nexters.phochak.dto.response;
 
-import com.nexters.phochak.domain.IgnoredUsers;
+import com.nexters.phochak.ignore.domain.IgnoredUsers;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;

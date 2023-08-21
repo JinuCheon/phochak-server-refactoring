@@ -1,7 +1,5 @@
-package com.nexters.phochak.repository;
+package com.nexters.phochak.ignore.domain;
 
-import com.nexters.phochak.domain.IgnoredUsers;
-import com.nexters.phochak.domain.IgnoredUsersRelation;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;

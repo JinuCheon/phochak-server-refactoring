@@ -1,8 +1,9 @@
 package com.nexters.phochak.repository;
 
-import com.nexters.phochak.domain.IgnoredUsers;
-import com.nexters.phochak.domain.IgnoredUsersRelation;
 import com.nexters.phochak.domain.User;
+import com.nexters.phochak.ignore.domain.IgnoredUserRepository;
+import com.nexters.phochak.ignore.domain.IgnoredUsers;
+import com.nexters.phochak.ignore.domain.IgnoredUsersRelation;
 import com.nexters.phochak.specification.OAuthProviderEnum;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,13 +13,15 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @ActiveProfiles("test")
 @SpringBootTest
 class IgnoredUserRepositoryTest {
 
-    @Autowired IgnoredUserRepository ignoredUserRepository;
+    @Autowired
+    IgnoredUserRepository ignoredUserRepository;
     @Autowired UserRepository userRepository;
 
     @Transactional

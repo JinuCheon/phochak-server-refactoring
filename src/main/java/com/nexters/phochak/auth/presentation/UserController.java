@@ -11,7 +11,6 @@ import com.nexters.phochak.dto.request.NicknameModifyRequestDto;
 import com.nexters.phochak.dto.request.ReissueTokenRequestDto;
 import com.nexters.phochak.dto.request.WithdrawRequestDto;
 import com.nexters.phochak.dto.response.CommonResponse;
-import com.nexters.phochak.dto.response.IgnoredUserResponseDto;
 import com.nexters.phochak.dto.response.JwtResponseDto;
 import com.nexters.phochak.dto.response.UserCheckResponseDto;
 import com.nexters.phochak.dto.response.UserInfoResponseDto;
@@ -19,7 +18,6 @@ import com.nexters.phochak.service.UserService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.dao.DataIntegrityViolationException;
-import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -30,7 +28,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.Valid;
-import java.util.List;
 
 @Slf4j
 @RequiredArgsConstructor
@@ -98,26 +95,4 @@ public class UserController {
         return new CommonResponse<>();
     }
 
-    @Auth
-    @PostMapping("/ignore/{ignoredUserId}")
-    public CommonResponse<Void> ignoreUser(@PathVariable(value = "ignoredUserId") Long ignoredUserId) {
-        Long me = UserContext.CONTEXT.get();
-        userService.ignoreUser(me, ignoredUserId);
-        return new CommonResponse<>();
-    }
-
-    @Auth
-    @DeleteMapping("/ignore/{ignoredUserId}")
-    public CommonResponse<Void> cancelIgnoreUser(@PathVariable(value = "ignoredUserId") Long ignoredUserId) {
-        Long me = UserContext.CONTEXT.get();
-        userService.cancelIgnoreUser(me, ignoredUserId);
-        return new CommonResponse<>();
-    }
-
-    @Auth
-    @GetMapping("/ignore")
-    public CommonResponse<List<IgnoredUserResponseDto>> getIgnoreUser() {
-        Long me = UserContext.CONTEXT.get();
-        return new CommonResponse<>(userService.getIgnoreUserList(me));
-    }
 }

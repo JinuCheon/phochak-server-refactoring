@@ -1,4 +1,4 @@
-package com.nexters.phochak.domain;
+package com.nexters.phochak.ignore.domain;
 
 import lombok.Builder;
 import lombok.Getter;
