@@ -1,4 +1,4 @@
-package com.nexters.phochak.repository;
+package com.nexters.phochak.deprecated.repository;
 
 import com.nexters.phochak.ignore.domain.IgnoredUserRepository;
 import com.nexters.phochak.ignore.domain.IgnoredUsers;
@@ -17,6 +17,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+@Deprecated
 @ActiveProfiles("test")
 @SpringBootTest
 class IgnoredUserRepositoryTest {

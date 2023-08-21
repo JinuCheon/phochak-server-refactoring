@@ -1,4 +1,4 @@
-package com.nexters.phochak.service;
+package com.nexters.phochak.deprecated.service;
 
 import com.nexters.phochak.common.config.property.NCPStorageProperties;
 import com.nexters.phochak.notification.application.NotificationService;
@@ -25,6 +25,7 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.BDDMockito.given;
 import static org.mockito.Mockito.*;
 
+@Deprecated
 @ExtendWith(MockitoExtension.class)
 class NCPShortsServiceTest {
 

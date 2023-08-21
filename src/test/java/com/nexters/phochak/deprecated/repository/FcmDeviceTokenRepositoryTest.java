@@ -1,4 +1,4 @@
-package com.nexters.phochak.repository;
+package com.nexters.phochak.deprecated.repository;
 
 import com.nexters.phochak.notification.domain.FcmDeviceToken;
 import com.nexters.phochak.notification.domain.FcmDeviceTokenRepository;
@@ -21,6 +21,7 @@ import org.springframework.transaction.annotation.Transactional;
 import javax.persistence.EntityManager;
 import java.util.List;
 
+@Deprecated
 @SpringBootTest
 @ActiveProfiles("test")
 @Transactional

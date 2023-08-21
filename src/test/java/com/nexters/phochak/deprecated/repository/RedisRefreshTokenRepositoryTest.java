@@ -1,4 +1,4 @@
-package com.nexters.phochak.repository;
+package com.nexters.phochak.deprecated.repository;
 
 import com.nexters.phochak.auth.domain.RefreshTokenRepository;
 import org.assertj.core.api.Assertions;
@@ -9,6 +9,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.transaction.annotation.Transactional;
 
+@Deprecated
 @SpringBootTest
 @ActiveProfiles("test")
 @Transactional

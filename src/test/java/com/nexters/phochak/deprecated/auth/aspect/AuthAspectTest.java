@@ -1,6 +1,7 @@
-package com.nexters.phochak.auth.aspect;
+package com.nexters.phochak.deprecated.auth.aspect;
 
 import com.nexters.phochak.auth.application.JwtTokenServiceImpl;
+import com.nexters.phochak.auth.aspect.AuthAspect;
 import com.nexters.phochak.common.exception.PhochakException;
 import com.nexters.phochak.common.exception.ResCode;
 import com.nexters.phochak.user.application.UserServiceImpl;
@@ -19,6 +20,7 @@ import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.BDDMockito.*;
 import static org.mockito.Mockito.times;
 
+@Deprecated
 @ExtendWith(MockitoExtension.class)
 class AuthAspectTest {
     @Mock

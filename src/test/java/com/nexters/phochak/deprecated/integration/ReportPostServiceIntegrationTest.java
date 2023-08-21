@@ -1,4 +1,4 @@
-package com.nexters.phochak.integration;
+package com.nexters.phochak.deprecated.integration;
 
 import com.nexters.phochak.common.exception.PhochakException;
 import com.nexters.phochak.post.domain.Post;
@@ -26,6 +26,7 @@ import java.util.Optional;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
+@Deprecated
 @Transactional
 @ActiveProfiles("test")
 @SpringBootTest

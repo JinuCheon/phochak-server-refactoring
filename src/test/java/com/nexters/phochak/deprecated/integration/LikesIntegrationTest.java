@@ -1,4 +1,4 @@
-package com.nexters.phochak.integration;
+package com.nexters.phochak.deprecated.integration;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.nexters.phochak.auth.TokenDto;
@@ -46,6 +46,7 @@ import static org.springframework.restdocs.request.RequestDocumentation.pathPara
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
+@Deprecated
 @SpringBootTest
 @AutoConfigureMockMvc
 @AutoConfigureRestDocs

@@ -1,4 +1,4 @@
-package com.nexters.phochak.service;
+package com.nexters.phochak.deprecated.service;
 
 import com.nexters.phochak.common.exception.PhochakException;
 import com.nexters.phochak.hashtag.application.HashtagServiceImpl;
@@ -18,6 +18,7 @@ import java.util.List;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThatThrownBy;
 import static org.mockito.Mockito.*;
 
+@Deprecated
 @ExtendWith(MockitoExtension.class)
 class HashtagServiceTest {
 

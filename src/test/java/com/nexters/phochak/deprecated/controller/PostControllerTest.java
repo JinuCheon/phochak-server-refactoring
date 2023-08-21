@@ -1,4 +1,4 @@
-package com.nexters.phochak.controller;
+package com.nexters.phochak.deprecated.controller;
 
 import com.nexters.phochak.docs.RestDocs;
 import com.nexters.phochak.post.CustomCursor;
@@ -37,6 +37,7 @@ import static org.springframework.restdocs.payload.PayloadDocumentation.response
 import static org.springframework.restdocs.request.RequestDocumentation.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
+@Deprecated
 @ExtendWith(MockitoExtension.class)
 class PostControllerTest extends RestDocs {
 

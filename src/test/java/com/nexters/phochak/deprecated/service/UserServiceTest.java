@@ -1,4 +1,4 @@
-package com.nexters.phochak.service;
+package com.nexters.phochak.deprecated.service;
 
 import com.nexters.phochak.auth.KakaoUserInformation;
 import com.nexters.phochak.auth.TokenDto;
@@ -31,6 +31,7 @@ import static org.mockito.BDDMockito.then;
 import static org.mockito.Mockito.atLeastOnce;
 import static org.mockito.Mockito.never;
 
+@Deprecated
 @ExtendWith(MockitoExtension.class)
 class UserServiceTest {
     @Mock

@@ -1,4 +1,4 @@
-package com.nexters.phochak.service;
+package com.nexters.phochak.deprecated.service;
 
 import com.nexters.phochak.common.exception.PhochakException;
 import com.nexters.phochak.likes.application.LikeServiceImpl;
@@ -24,6 +24,7 @@ import static org.mockito.ArgumentMatchers.*;
 import static org.mockito.BDDMockito.given;
 import static org.mockito.Mockito.*;
 
+@Deprecated
 @ExtendWith(MockitoExtension.class)
 class LikesServiceTest {
 

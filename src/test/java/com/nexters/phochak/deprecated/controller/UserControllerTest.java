@@ -1,4 +1,4 @@
-package com.nexters.phochak.controller;
+package com.nexters.phochak.deprecated.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.nexters.phochak.auth.JwtResponseDto;
@@ -40,6 +40,7 @@ import static org.springframework.restdocs.payload.PayloadDocumentation.*;
 import static org.springframework.restdocs.request.RequestDocumentation.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
+@Deprecated
 @ExtendWith(MockitoExtension.class)
 class UserControllerTest extends RestDocs {
 

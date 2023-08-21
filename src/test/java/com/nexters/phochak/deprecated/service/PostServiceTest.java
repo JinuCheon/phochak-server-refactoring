@@ -1,4 +1,4 @@
-package com.nexters.phochak.service;
+package com.nexters.phochak.deprecated.service;
 
 import com.nexters.phochak.common.exception.PhochakException;
 import com.nexters.phochak.common.exception.ResCode;
@@ -25,6 +25,7 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThatThrownBy;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.BDDMockito.given;
 
+@Deprecated
 @ExtendWith(MockitoExtension.class)
 class PostServiceTest {
 

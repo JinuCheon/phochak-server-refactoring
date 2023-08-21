@@ -1,4 +1,4 @@
-package com.nexters.phochak.integration;
+package com.nexters.phochak.deprecated.integration;
 
 import com.nexters.phochak.post.application.PostService;
 import com.nexters.phochak.user.application.UserService;
@@ -23,6 +23,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
+@Deprecated
 @Transactional
 @AutoConfigureMockMvc
 @ActiveProfiles(profiles = "test")

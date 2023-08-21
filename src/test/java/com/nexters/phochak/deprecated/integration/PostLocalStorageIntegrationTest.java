@@ -1,4 +1,4 @@
-package com.nexters.phochak.integration;
+package com.nexters.phochak.deprecated.integration;
 
 import com.nexters.phochak.auth.TokenDto;
 import com.nexters.phochak.auth.application.JwtTokenServiceImpl;
@@ -27,6 +27,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
+@Deprecated
 @SpringBootTest
 @AutoConfigureMockMvc
 @AutoConfigureRestDocs
