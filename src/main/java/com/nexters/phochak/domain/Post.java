@@ -2,6 +2,7 @@ package com.nexters.phochak.domain;
 
 import com.nexters.phochak.common.domain.BaseTime;
 import com.nexters.phochak.report.domain.ReportPost;
+import com.nexters.phochak.shorts.domain.Shorts;
 import com.nexters.phochak.specification.PostCategoryEnum;
 import lombok.Builder;
 import lombok.Getter;

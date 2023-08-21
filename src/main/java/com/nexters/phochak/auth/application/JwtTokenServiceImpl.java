@@ -8,7 +8,6 @@ import com.nexters.phochak.common.exception.ResCode;
 import com.nexters.phochak.dto.TokenDto;
 import com.nexters.phochak.dto.request.ReissueTokenRequestDto;
 import com.nexters.phochak.dto.response.JwtResponseDto;
-import com.nexters.phochak.service.JwtTokenService;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.Jwts;

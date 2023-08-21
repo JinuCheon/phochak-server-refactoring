@@ -1,6 +1,5 @@
-package com.nexters.phochak.repository.impl;
+package com.nexters.phochak.auth.domain;
 
-import com.nexters.phochak.auth.domain.RefreshTokenRepository;
 import com.nexters.phochak.common.config.property.JwtProperties;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.redis.core.StringRedisTemplate;

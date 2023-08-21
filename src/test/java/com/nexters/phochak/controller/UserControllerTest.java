@@ -1,13 +1,13 @@
 package com.nexters.phochak.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.nexters.phochak.auth.application.JwtTokenService;
 import com.nexters.phochak.auth.presentation.UserController;
 import com.nexters.phochak.docs.RestDocs;
 import com.nexters.phochak.dto.response.IgnoredUserResponseDto;
+import com.nexters.phochak.dto.response.JwtResponseDto;
 import com.nexters.phochak.dto.response.UserCheckResponseDto;
 import com.nexters.phochak.dto.response.UserInfoResponseDto;
-import com.nexters.phochak.dto.response.JwtResponseDto;
-import com.nexters.phochak.service.JwtTokenService;
 import com.nexters.phochak.service.UserService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -35,16 +35,9 @@ import static org.mockito.Mockito.when;
 import static org.springframework.restdocs.headers.HeaderDocumentation.headerWithName;
 import static org.springframework.restdocs.headers.HeaderDocumentation.requestHeaders;
 import static org.springframework.restdocs.mockmvc.MockMvcRestDocumentation.document;
-import static org.springframework.restdocs.operation.preprocess.Preprocessors.modifyUris;
-import static org.springframework.restdocs.operation.preprocess.Preprocessors.preprocessRequest;
-import static org.springframework.restdocs.operation.preprocess.Preprocessors.preprocessResponse;
-import static org.springframework.restdocs.operation.preprocess.Preprocessors.prettyPrint;
-import static org.springframework.restdocs.payload.PayloadDocumentation.fieldWithPath;
-import static org.springframework.restdocs.payload.PayloadDocumentation.requestFields;
-import static org.springframework.restdocs.payload.PayloadDocumentation.responseFields;
-import static org.springframework.restdocs.request.RequestDocumentation.parameterWithName;
-import static org.springframework.restdocs.request.RequestDocumentation.pathParameters;
-import static org.springframework.restdocs.request.RequestDocumentation.requestParameters;
+import static org.springframework.restdocs.operation.preprocess.Preprocessors.*;
+import static org.springframework.restdocs.payload.PayloadDocumentation.*;
+import static org.springframework.restdocs.request.RequestDocumentation.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @ExtendWith(MockitoExtension.class)

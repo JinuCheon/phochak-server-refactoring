@@ -2,6 +2,7 @@ package com.nexters.phochak.auth.presentation;
 
 import com.nexters.phochak.auth.UserContext;
 import com.nexters.phochak.auth.annotation.Auth;
+import com.nexters.phochak.auth.application.JwtTokenService;
 import com.nexters.phochak.common.exception.PhochakException;
 import com.nexters.phochak.common.exception.ResCode;
 import com.nexters.phochak.dto.request.LoginRequestDto;
@@ -14,7 +15,6 @@ import com.nexters.phochak.dto.response.IgnoredUserResponseDto;
 import com.nexters.phochak.dto.response.JwtResponseDto;
 import com.nexters.phochak.dto.response.UserCheckResponseDto;
 import com.nexters.phochak.dto.response.UserInfoResponseDto;
-import com.nexters.phochak.service.JwtTokenService;
 import com.nexters.phochak.service.UserService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

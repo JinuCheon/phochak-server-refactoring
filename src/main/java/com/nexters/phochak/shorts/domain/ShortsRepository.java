@@ -1,6 +1,5 @@
-package com.nexters.phochak.repository;
+package com.nexters.phochak.shorts.domain;
 
-import com.nexters.phochak.domain.Shorts;
 import com.nexters.phochak.specification.ShortsStateEnum;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;

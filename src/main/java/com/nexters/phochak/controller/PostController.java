@@ -2,7 +2,6 @@ package com.nexters.phochak.controller;
 
 import com.nexters.phochak.auth.UserContext;
 import com.nexters.phochak.auth.annotation.Auth;
-import com.nexters.phochak.dto.EncodingCallbackRequestDto;
 import com.nexters.phochak.dto.PostUploadKeyResponseDto;
 import com.nexters.phochak.dto.request.CustomCursor;
 import com.nexters.phochak.dto.request.PostCreateRequestDto;
@@ -12,7 +11,6 @@ import com.nexters.phochak.dto.response.CommonResponse;
 import com.nexters.phochak.dto.response.PostPageResponseDto;
 import com.nexters.phochak.report.application.ReportPostService;
 import com.nexters.phochak.service.PostService;
-import com.nexters.phochak.service.ShortsService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -34,7 +32,6 @@ import java.util.List;
 @RequestMapping("/v1/post")
 public class PostController {
 
-    private final ShortsService shortsService;
     private final PostService postService;
     private final ReportPostService reportPostService;
 
@@ -43,11 +40,6 @@ public class PostController {
     public CommonResponse<PostUploadKeyResponseDto> generateUploadKey(
             @RequestParam(name = "file-extension") String fileExtension) {
         return new CommonResponse<>(postService.generateUploadKey(fileExtension));
-    }
-
-    @PostMapping("/encoding-callback")
-    public void encodingCallback(@RequestBody EncodingCallbackRequestDto encodingCallbackRequestDto) {
-        shortsService.processPost(encodingCallbackRequestDto);
     }
 
     @Auth

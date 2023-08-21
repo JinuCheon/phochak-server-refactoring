@@ -1,8 +1,7 @@
-package com.nexters.phochak.service;
+package com.nexters.phochak.shorts.application;
 
 import com.nexters.phochak.domain.Post;
 import com.nexters.phochak.dto.EncodingCallbackRequestDto;
-import org.springframework.transaction.annotation.Transactional;
 
 public interface ShortsService {
 

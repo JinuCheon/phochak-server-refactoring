@@ -1,20 +1,20 @@
 package com.nexters.phochak.integration;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.nexters.phochak.auth.application.JwtTokenService;
 import com.nexters.phochak.common.exception.PhochakException;
 import com.nexters.phochak.common.exception.ResCode;
 import com.nexters.phochak.controller.LikesController;
 import com.nexters.phochak.docs.RestDocs;
 import com.nexters.phochak.domain.Likes;
 import com.nexters.phochak.domain.Post;
-import com.nexters.phochak.domain.Shorts;
 import com.nexters.phochak.domain.User;
 import com.nexters.phochak.dto.TokenDto;
 import com.nexters.phochak.repository.LikesRepository;
 import com.nexters.phochak.repository.PostRepository;
-import com.nexters.phochak.repository.ShortsRepository;
 import com.nexters.phochak.repository.UserRepository;
-import com.nexters.phochak.service.JwtTokenService;
+import com.nexters.phochak.shorts.domain.Shorts;
+import com.nexters.phochak.shorts.domain.ShortsRepository;
 import com.nexters.phochak.specification.OAuthProviderEnum;
 import com.nexters.phochak.specification.PostCategoryEnum;
 import org.junit.jupiter.api.BeforeEach;
