@@ -1,15 +1,14 @@
-package com.nexters.phochak.service.impl;
+package com.nexters.phochak.report.application;
 
 import com.nexters.phochak.common.exception.PhochakException;
 import com.nexters.phochak.common.exception.ResCode;
 import com.nexters.phochak.domain.Post;
-import com.nexters.phochak.domain.ReportPost;
 import com.nexters.phochak.domain.User;
+import com.nexters.phochak.report.domain.ReportPost;
+import com.nexters.phochak.report.domain.ReportPostRepository;
 import com.nexters.phochak.repository.PostRepository;
-import com.nexters.phochak.repository.ReportPostRepository;
 import com.nexters.phochak.repository.UserRepository;
 import com.nexters.phochak.service.NotifyService;
-import com.nexters.phochak.service.ReportPostService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;

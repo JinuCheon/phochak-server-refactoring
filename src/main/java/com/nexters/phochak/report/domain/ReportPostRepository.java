@@ -1,6 +1,5 @@
-package com.nexters.phochak.repository;
+package com.nexters.phochak.report.domain;
 
-import com.nexters.phochak.domain.ReportPost;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface ReportPostRepository extends JpaRepository<ReportPost, Long> {

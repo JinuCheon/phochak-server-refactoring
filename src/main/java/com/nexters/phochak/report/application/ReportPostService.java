@@ -1,4 +1,4 @@
-package com.nexters.phochak.service;
+package com.nexters.phochak.report.application;
 
 public interface ReportPostService {
     void processReport(Long userId, Long postId);
