@@ -1,11 +1,11 @@
 package com.nexters.phochak.service;
 
 import com.nexters.phochak.client.StorageBucketClient;
+import com.nexters.phochak.common.exception.PhochakException;
+import com.nexters.phochak.common.exception.ResCode;
 import com.nexters.phochak.domain.Post;
 import com.nexters.phochak.domain.User;
 import com.nexters.phochak.dto.PostUploadKeyResponseDto;
-import com.nexters.phochak.exception.PhochakException;
-import com.nexters.phochak.exception.ResCode;
 import com.nexters.phochak.repository.PostRepository;
 import com.nexters.phochak.repository.UserRepository;
 import com.nexters.phochak.service.impl.PostServiceImpl;

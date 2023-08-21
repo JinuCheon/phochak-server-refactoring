@@ -1,11 +1,11 @@
 package com.nexters.phochak.auth.aspect;
 
 import com.nexters.phochak.auth.UserContext;
-import com.nexters.phochak.exception.PhochakException;
-import com.nexters.phochak.exception.ResCode;
+import com.nexters.phochak.auth.application.JwtTokenServiceImpl;
+import com.nexters.phochak.common.exception.PhochakException;
+import com.nexters.phochak.common.exception.ResCode;
 import com.nexters.phochak.service.JwtTokenService;
 import com.nexters.phochak.service.UserService;
-import com.nexters.phochak.auth.application.JwtTokenServiceImpl;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;

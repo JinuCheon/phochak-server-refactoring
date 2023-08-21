@@ -1,19 +1,19 @@
 package com.nexters.phochak.service.impl;
 
 import com.nexters.phochak.auth.UserContext;
+import com.nexters.phochak.auth.application.OAuthService;
+import com.nexters.phochak.common.exception.PhochakException;
+import com.nexters.phochak.common.exception.ResCode;
 import com.nexters.phochak.domain.IgnoredUsers;
 import com.nexters.phochak.domain.IgnoredUsersRelation;
 import com.nexters.phochak.domain.User;
-import com.nexters.phochak.dto.response.IgnoredUserResponseDto;
 import com.nexters.phochak.dto.OAuthUserInformation;
+import com.nexters.phochak.dto.response.IgnoredUserResponseDto;
 import com.nexters.phochak.dto.response.UserCheckResponseDto;
 import com.nexters.phochak.dto.response.UserInfoResponseDto;
-import com.nexters.phochak.exception.PhochakException;
-import com.nexters.phochak.exception.ResCode;
 import com.nexters.phochak.repository.IgnoredUserRepository;
 import com.nexters.phochak.repository.UserRepository;
 import com.nexters.phochak.service.NotificationService;
-import com.nexters.phochak.auth.application.OAuthService;
 import com.nexters.phochak.service.PostService;
 import com.nexters.phochak.service.UserService;
 import com.nexters.phochak.specification.OAuthProviderEnum;

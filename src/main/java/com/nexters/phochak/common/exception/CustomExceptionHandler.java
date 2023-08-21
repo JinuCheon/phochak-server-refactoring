@@ -1,4 +1,4 @@
-package com.nexters.phochak.exception;
+package com.nexters.phochak.common.exception;
 
 import com.nexters.phochak.dto.response.CommonResponse;
 import lombok.extern.slf4j.Slf4j;

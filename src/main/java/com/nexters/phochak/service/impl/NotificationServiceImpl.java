@@ -2,11 +2,9 @@ package com.nexters.phochak.service.impl;
 
 import com.nexters.phochak.client.NotificationClient;
 import com.nexters.phochak.domain.FcmDeviceToken;
-import com.nexters.phochak.dto.NotificationFormDto;
-import com.nexters.phochak.exception.PhochakException;
-import com.nexters.phochak.exception.ResCode;
-import com.nexters.phochak.repository.FcmDeviceTokenRepository;
 import com.nexters.phochak.domain.User;
+import com.nexters.phochak.dto.NotificationFormDto;
+import com.nexters.phochak.repository.FcmDeviceTokenRepository;
 import com.nexters.phochak.service.NotificationService;
 import com.nexters.phochak.specification.ShortsStateEnum;
 import lombok.RequiredArgsConstructor;

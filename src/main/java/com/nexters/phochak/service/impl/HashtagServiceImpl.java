@@ -1,10 +1,10 @@
 package com.nexters.phochak.service.impl;
 
+import com.nexters.phochak.common.exception.PhochakException;
+import com.nexters.phochak.common.exception.ResCode;
 import com.nexters.phochak.domain.Hashtag;
 import com.nexters.phochak.domain.Post;
 import com.nexters.phochak.dto.HashtagFetchDto;
-import com.nexters.phochak.exception.PhochakException;
-import com.nexters.phochak.exception.ResCode;
 import com.nexters.phochak.repository.HashtagRepository;
 import com.nexters.phochak.service.HashtagService;
 import lombok.RequiredArgsConstructor;

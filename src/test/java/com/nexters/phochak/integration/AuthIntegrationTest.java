@@ -1,8 +1,9 @@
 package com.nexters.phochak.integration;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.nexters.phochak.client.impl.NCPStorageClient;
 import com.nexters.phochak.auth.presentation.UserController;
+import com.nexters.phochak.client.impl.NCPStorageClient;
+import com.nexters.phochak.common.exception.CustomExceptionHandler;
 import com.nexters.phochak.docs.RestDocs;
 import com.nexters.phochak.domain.Hashtag;
 import com.nexters.phochak.domain.Post;
@@ -12,7 +13,6 @@ import com.nexters.phochak.dto.TokenDto;
 import com.nexters.phochak.dto.request.LogoutRequestDto;
 import com.nexters.phochak.dto.request.ReissueTokenRequestDto;
 import com.nexters.phochak.dto.request.WithdrawRequestDto;
-import com.nexters.phochak.exception.CustomExceptionHandler;
 import com.nexters.phochak.repository.HashtagRepository;
 import com.nexters.phochak.repository.PostRepository;
 import com.nexters.phochak.repository.RefreshTokenRepository;
@@ -38,24 +38,16 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
-
 import java.util.List;
 
 import static com.nexters.phochak.auth.aspect.AuthAspect.AUTHORIZATION_HEADER;
-import static com.nexters.phochak.exception.ResCode.EXPIRED_TOKEN;
-import static com.nexters.phochak.exception.ResCode.INVALID_TOKEN;
-import static com.nexters.phochak.exception.ResCode.OK;
+import static com.nexters.phochak.common.exception.ResCode.*;
 import static org.springframework.restdocs.headers.HeaderDocumentation.headerWithName;
 import static org.springframework.restdocs.headers.HeaderDocumentation.requestHeaders;
 import static org.springframework.restdocs.mockmvc.MockMvcRestDocumentation.document;
 import static org.springframework.restdocs.mockmvc.RestDocumentationRequestBuilders.post;
-import static org.springframework.restdocs.operation.preprocess.Preprocessors.modifyUris;
-import static org.springframework.restdocs.operation.preprocess.Preprocessors.preprocessRequest;
-import static org.springframework.restdocs.operation.preprocess.Preprocessors.preprocessResponse;
-import static org.springframework.restdocs.operation.preprocess.Preprocessors.prettyPrint;
-import static org.springframework.restdocs.payload.PayloadDocumentation.fieldWithPath;
-import static org.springframework.restdocs.payload.PayloadDocumentation.requestFields;
-import static org.springframework.restdocs.payload.PayloadDocumentation.responseFields;
+import static org.springframework.restdocs.operation.preprocess.Preprocessors.*;
+import static org.springframework.restdocs.payload.PayloadDocumentation.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 

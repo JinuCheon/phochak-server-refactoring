@@ -1,9 +1,9 @@
 package com.nexters.phochak.service;
 
+import com.nexters.phochak.common.exception.PhochakException;
 import com.nexters.phochak.domain.Likes;
 import com.nexters.phochak.domain.Post;
 import com.nexters.phochak.domain.User;
-import com.nexters.phochak.exception.PhochakException;
 import com.nexters.phochak.repository.LikesRepository;
 import com.nexters.phochak.repository.PostRepository;
 import com.nexters.phochak.repository.UserRepository;
@@ -20,13 +20,9 @@ import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
-import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.ArgumentMatchers.anyLong;
-import static org.mockito.ArgumentMatchers.refEq;
+import static org.mockito.ArgumentMatchers.*;
 import static org.mockito.BDDMockito.given;
-import static org.mockito.Mockito.never;
-import static org.mockito.Mockito.times;
-import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
 class LikesServiceTest {

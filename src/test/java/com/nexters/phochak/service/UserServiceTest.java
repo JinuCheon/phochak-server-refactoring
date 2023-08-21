@@ -1,14 +1,14 @@
 package com.nexters.phochak.service;
 
+import com.nexters.phochak.auth.application.KakaoOAuthServiceImpl;
 import com.nexters.phochak.auth.application.OAuthService;
+import com.nexters.phochak.common.exception.PhochakException;
+import com.nexters.phochak.common.exception.ResCode;
 import com.nexters.phochak.domain.User;
 import com.nexters.phochak.dto.KakaoUserInformation;
 import com.nexters.phochak.dto.TokenDto;
 import com.nexters.phochak.dto.response.UserCheckResponseDto;
-import com.nexters.phochak.exception.PhochakException;
-import com.nexters.phochak.exception.ResCode;
 import com.nexters.phochak.repository.UserRepository;
-import com.nexters.phochak.auth.application.KakaoOAuthServiceImpl;
 import com.nexters.phochak.service.impl.UserServiceImpl;
 import com.nexters.phochak.specification.OAuthProviderEnum;
 import org.junit.jupiter.api.BeforeEach;

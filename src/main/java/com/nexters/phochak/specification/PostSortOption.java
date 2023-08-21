@@ -1,7 +1,7 @@
 package com.nexters.phochak.specification;
 
-import com.nexters.phochak.exception.PhochakException;
-import com.nexters.phochak.exception.ResCode;
+import com.nexters.phochak.common.exception.PhochakException;
+import com.nexters.phochak.common.exception.ResCode;
 
 public enum PostSortOption {
     LATEST, LIKE, VIEW;

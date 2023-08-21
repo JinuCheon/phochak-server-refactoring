@@ -1,7 +1,7 @@
 package com.nexters.phochak.integration;
 
+import com.nexters.phochak.common.exception.PhochakException;
 import com.nexters.phochak.domain.Post;
-import com.nexters.phochak.exception.PhochakException;
 import com.nexters.phochak.repository.PostRepository;
 import com.nexters.phochak.service.impl.PostServiceImpl;
 import com.nexters.phochak.specification.PostCategoryEnum;

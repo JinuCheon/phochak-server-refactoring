@@ -2,10 +2,9 @@ package com.nexters.phochak.auth.application;
 
 import com.nexters.phochak.auth.presentation.KakaoAccessTokenFeignClient;
 import com.nexters.phochak.client.KakaoInformationFeignClient;
-import com.nexters.phochak.global.config.property.KakaoLoginProperties;
+import com.nexters.phochak.common.config.property.KakaoLoginProperties;
 import com.nexters.phochak.dto.KakaoAccessTokenResponseDto;
 import com.nexters.phochak.dto.OAuthUserInformation;
-import com.nexters.phochak.auth.application.OAuthService;
 import com.nexters.phochak.specification.OAuthProviderEnum;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

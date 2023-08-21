@@ -1,4 +1,4 @@
-package com.nexters.phochak.global.config;
+package com.nexters.phochak.common.config;
 
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Configuration;

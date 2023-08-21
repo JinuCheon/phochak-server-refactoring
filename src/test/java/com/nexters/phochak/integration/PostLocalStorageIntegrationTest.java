@@ -1,11 +1,15 @@
 package com.nexters.phochak.integration;
 
+import com.nexters.phochak.auth.application.JwtTokenServiceImpl;
 import com.nexters.phochak.domain.User;
 import com.nexters.phochak.dto.TokenDto;
 import com.nexters.phochak.repository.UserRepository;
-import com.nexters.phochak.auth.application.JwtTokenServiceImpl;
 import com.nexters.phochak.specification.OAuthProviderEnum;
-import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInstance;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.restdocs.AutoConfigureRestDocs;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
@@ -17,8 +21,8 @@ import org.springframework.test.web.servlet.MockMvc;
 import java.io.FileInputStream;
 
 import static com.nexters.phochak.auth.aspect.AuthAspect.AUTHORIZATION_HEADER;
-import static com.nexters.phochak.exception.ResCode.INVALID_INPUT;
-import static com.nexters.phochak.exception.ResCode.OK;
+import static com.nexters.phochak.common.exception.ResCode.INVALID_INPUT;
+import static com.nexters.phochak.common.exception.ResCode.OK;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.multipart;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;

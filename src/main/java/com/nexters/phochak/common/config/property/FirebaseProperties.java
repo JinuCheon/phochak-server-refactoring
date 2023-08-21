@@ -1,4 +1,4 @@
-package com.nexters.phochak.global.config.property;
+package com.nexters.phochak.common.config.property;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
@@ -8,9 +8,8 @@ import org.springframework.boot.context.properties.ConstructorBinding;
 @Getter
 @RequiredArgsConstructor
 @ConstructorBinding
-@ConfigurationProperties(prefix = "spring.redis")
-public class RedisProperties {
-    private final String host;
-    private final int port;
-    private final String password;
+@ConfigurationProperties(prefix = "firebase")
+public class FirebaseProperties {
+    private final String firebaseScope;
+    private final String privateKeyLocation;
 }

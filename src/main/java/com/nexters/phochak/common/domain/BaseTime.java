@@ -1,4 +1,4 @@
-package com.nexters.phochak.global.domain;
+package com.nexters.phochak.common.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;

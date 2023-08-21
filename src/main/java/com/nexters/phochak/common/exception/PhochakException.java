@@ -1,4 +1,4 @@
-package com.nexters.phochak.exception;
+package com.nexters.phochak.common.exception;
 
 import lombok.Getter;
 

@@ -1,17 +1,17 @@
-package com.nexters.phochak.global.config;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.util.List;
-
-import com.nexters.phochak.global.config.property.FirebaseProperties;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
+package com.nexters.phochak.common.config;
 
 import com.google.auth.oauth2.GoogleCredentials;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.FirebaseOptions;
 import com.google.firebase.messaging.FirebaseMessaging;
+import com.nexters.phochak.common.config.property.FirebaseProperties;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.List;
 
 @Profile("prod")
 @Configuration

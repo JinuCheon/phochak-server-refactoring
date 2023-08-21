@@ -1,11 +1,11 @@
 package com.nexters.phochak.integration;
 
 import com.nexters.phochak.client.SlackPostReportFeignClient;
+import com.nexters.phochak.common.exception.PhochakException;
 import com.nexters.phochak.domain.Post;
 import com.nexters.phochak.domain.ReportPost;
 import com.nexters.phochak.domain.Shorts;
 import com.nexters.phochak.domain.User;
-import com.nexters.phochak.exception.PhochakException;
 import com.nexters.phochak.repository.PostRepository;
 import com.nexters.phochak.repository.ReportPostRepository;
 import com.nexters.phochak.repository.UserRepository;

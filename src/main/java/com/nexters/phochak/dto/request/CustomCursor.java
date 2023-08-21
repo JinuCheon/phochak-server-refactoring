@@ -1,14 +1,13 @@
 package com.nexters.phochak.dto.request;
 
-import com.nexters.phochak.exception.PhochakException;
-import com.nexters.phochak.exception.ResCode;
+import com.nexters.phochak.common.exception.PhochakException;
+import com.nexters.phochak.common.exception.ResCode;
 import com.nexters.phochak.specification.PostCategoryEnum;
 import com.nexters.phochak.specification.PostSortOption;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.ToString;
 
-import javax.validation.constraints.NotNull;
 import java.util.Objects;
 
 @ToString

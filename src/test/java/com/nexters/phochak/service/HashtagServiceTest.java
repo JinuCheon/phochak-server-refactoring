@@ -1,7 +1,7 @@
 package com.nexters.phochak.service;
 
+import com.nexters.phochak.common.exception.PhochakException;
 import com.nexters.phochak.domain.Post;
-import com.nexters.phochak.exception.PhochakException;
 import com.nexters.phochak.repository.HashtagRepository;
 import com.nexters.phochak.service.impl.HashtagServiceImpl;
 import org.junit.jupiter.api.DisplayName;
@@ -16,9 +16,7 @@ import java.util.Collections;
 import java.util.List;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThatThrownBy;
-import static org.mockito.Mockito.never;
-import static org.mockito.Mockito.times;
-import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
 class HashtagServiceTest {

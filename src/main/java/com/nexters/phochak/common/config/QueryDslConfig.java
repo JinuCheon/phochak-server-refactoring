@@ -1,4 +1,4 @@
-package com.nexters.phochak.global.config;
+package com.nexters.phochak.common.config;
 
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import org.springframework.context.annotation.Bean;

@@ -1,6 +1,6 @@
 package com.nexters.phochak.service.impl;
 
-import com.nexters.phochak.global.config.property.NCPStorageProperties;
+import com.nexters.phochak.common.config.property.NCPStorageProperties;
 import com.nexters.phochak.domain.Post;
 import com.nexters.phochak.domain.Shorts;
 import com.nexters.phochak.dto.EncodingCallbackRequestDto;
