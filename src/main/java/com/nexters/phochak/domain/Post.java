@@ -4,6 +4,7 @@ import com.nexters.phochak.common.domain.BaseTime;
 import com.nexters.phochak.report.domain.ReportPost;
 import com.nexters.phochak.shorts.domain.Shorts;
 import com.nexters.phochak.specification.PostCategoryEnum;
+import com.nexters.phochak.user.domain.User;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.ToString;

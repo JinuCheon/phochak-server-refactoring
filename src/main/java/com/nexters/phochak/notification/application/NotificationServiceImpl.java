@@ -1,11 +1,11 @@
 package com.nexters.phochak.notification.application;
 
-import com.nexters.phochak.domain.User;
 import com.nexters.phochak.dto.NotificationFormDto;
 import com.nexters.phochak.notification.domain.FcmDeviceToken;
 import com.nexters.phochak.notification.domain.FcmDeviceTokenRepository;
 import com.nexters.phochak.notification.presentation.NotificationClient;
 import com.nexters.phochak.specification.ShortsStateEnum;
+import com.nexters.phochak.user.domain.User;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

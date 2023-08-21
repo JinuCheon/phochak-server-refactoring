@@ -1,4 +1,4 @@
-package com.nexters.phochak.auth.presentation;
+package com.nexters.phochak.user.presentation;
 
 import com.nexters.phochak.auth.UserContext;
 import com.nexters.phochak.auth.annotation.Auth;
@@ -14,7 +14,7 @@ import com.nexters.phochak.dto.response.CommonResponse;
 import com.nexters.phochak.dto.response.JwtResponseDto;
 import com.nexters.phochak.dto.response.UserCheckResponseDto;
 import com.nexters.phochak.dto.response.UserInfoResponseDto;
-import com.nexters.phochak.service.UserService;
+import com.nexters.phochak.user.application.UserService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.dao.DataIntegrityViolationException;

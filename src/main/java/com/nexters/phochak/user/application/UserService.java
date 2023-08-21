@@ -1,4 +1,4 @@
-package com.nexters.phochak.service;
+package com.nexters.phochak.user.application;
 
 import com.nexters.phochak.dto.response.IgnoredUserResponseDto;
 import com.nexters.phochak.dto.response.UserCheckResponseDto;

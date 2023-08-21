@@ -1,6 +1,5 @@
-package com.nexters.phochak.repository;
+package com.nexters.phochak.user.domain;
 
-import com.nexters.phochak.domain.User;
 import com.nexters.phochak.specification.OAuthProviderEnum;
 import org.springframework.data.jpa.repository.JpaRepository;
 

@@ -6,7 +6,7 @@ import com.nexters.phochak.dto.PostFetchDto.PostUserInformation;
 import com.nexters.phochak.dto.request.CustomCursor;
 import com.nexters.phochak.dto.request.PostFilter;
 import com.nexters.phochak.dto.response.PostPageResponseDto;
-import com.nexters.phochak.dto.response.UserCheckResponseDto;
+import com.nexters.phochak.post.PostController;
 import com.nexters.phochak.service.PostService;
 import com.nexters.phochak.specification.PostCategoryEnum;
 import com.nexters.phochak.specification.PostSortOption;
@@ -31,15 +31,10 @@ import static org.mockito.Mockito.when;
 import static org.springframework.restdocs.headers.HeaderDocumentation.headerWithName;
 import static org.springframework.restdocs.headers.HeaderDocumentation.requestHeaders;
 import static org.springframework.restdocs.mockmvc.MockMvcRestDocumentation.document;
-import static org.springframework.restdocs.operation.preprocess.Preprocessors.modifyUris;
-import static org.springframework.restdocs.operation.preprocess.Preprocessors.preprocessRequest;
-import static org.springframework.restdocs.operation.preprocess.Preprocessors.preprocessResponse;
-import static org.springframework.restdocs.operation.preprocess.Preprocessors.prettyPrint;
+import static org.springframework.restdocs.operation.preprocess.Preprocessors.*;
 import static org.springframework.restdocs.payload.PayloadDocumentation.fieldWithPath;
 import static org.springframework.restdocs.payload.PayloadDocumentation.responseFields;
-import static org.springframework.restdocs.request.RequestDocumentation.parameterWithName;
-import static org.springframework.restdocs.request.RequestDocumentation.pathParameters;
-import static org.springframework.restdocs.request.RequestDocumentation.requestParameters;
+import static org.springframework.restdocs.request.RequestDocumentation.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @ExtendWith(MockitoExtension.class)

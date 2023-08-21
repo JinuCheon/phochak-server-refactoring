@@ -1,12 +1,11 @@
 package com.nexters.phochak.service;
 
-import com.nexters.phochak.domain.User;
 import com.nexters.phochak.dto.PostUploadKeyResponseDto;
 import com.nexters.phochak.dto.request.CustomCursor;
 import com.nexters.phochak.dto.request.PostCreateRequestDto;
-import com.nexters.phochak.dto.request.PostFilter;
 import com.nexters.phochak.dto.request.PostUpdateRequestDto;
 import com.nexters.phochak.dto.response.PostPageResponseDto;
+import com.nexters.phochak.user.domain.User;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;

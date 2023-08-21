@@ -1,10 +1,10 @@
 package com.nexters.phochak.integration;
 
 import com.nexters.phochak.auth.application.JwtTokenServiceImpl;
-import com.nexters.phochak.domain.User;
 import com.nexters.phochak.dto.TokenDto;
-import com.nexters.phochak.repository.UserRepository;
 import com.nexters.phochak.specification.OAuthProviderEnum;
+import com.nexters.phochak.user.domain.User;
+import com.nexters.phochak.user.domain.UserRepository;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;

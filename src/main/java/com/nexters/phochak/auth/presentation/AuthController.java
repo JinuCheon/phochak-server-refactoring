@@ -1,10 +1,10 @@
-package com.nexters.phochak.auth.presentation.v2;
+package com.nexters.phochak.auth.presentation;
 
 import com.nexters.phochak.auth.application.JwtTokenService;
 import com.nexters.phochak.dto.request.LoginV2RequestDto;
 import com.nexters.phochak.dto.response.CommonResponse;
 import com.nexters.phochak.dto.response.JwtResponseDto;
-import com.nexters.phochak.service.UserService;
+import com.nexters.phochak.user.application.UserService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,7 +18,7 @@ import javax.validation.Valid;
 @RequiredArgsConstructor
 @RequestMapping("/v2/auth")
 @RestController
-public class UserV2Controller {
+public class AuthController {
     private final UserService userService;
     private final JwtTokenService jwtTokenService;
 

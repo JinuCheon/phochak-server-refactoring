@@ -1,4 +1,4 @@
-package com.nexters.phochak.domain;
+package com.nexters.phochak.user.domain;
 
 import com.nexters.phochak.common.domain.BaseTime;
 import com.nexters.phochak.notification.domain.FcmDeviceToken;

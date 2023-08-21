@@ -2,16 +2,16 @@ package com.nexters.phochak.integration;
 
 import com.nexters.phochak.common.exception.PhochakException;
 import com.nexters.phochak.domain.Post;
-import com.nexters.phochak.domain.User;
 import com.nexters.phochak.report.application.ReportPostService;
 import com.nexters.phochak.report.domain.ReportPost;
 import com.nexters.phochak.report.domain.ReportPostRepository;
 import com.nexters.phochak.report.presentation.SlackPostReportFeignClient;
 import com.nexters.phochak.repository.PostRepository;
-import com.nexters.phochak.repository.UserRepository;
 import com.nexters.phochak.shorts.domain.Shorts;
 import com.nexters.phochak.specification.OAuthProviderEnum;
 import com.nexters.phochak.specification.PostCategoryEnum;
+import com.nexters.phochak.user.domain.User;
+import com.nexters.phochak.user.domain.UserRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

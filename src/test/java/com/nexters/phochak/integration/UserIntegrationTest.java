@@ -1,11 +1,10 @@
 package com.nexters.phochak.integration;
 
-import com.nexters.phochak.domain.User;
-import com.nexters.phochak.repository.UserRepository;
 import com.nexters.phochak.service.PostService;
-import com.nexters.phochak.service.UserService;
 import com.nexters.phochak.specification.OAuthProviderEnum;
-import org.assertj.core.api.Assertions;
+import com.nexters.phochak.user.application.UserService;
+import com.nexters.phochak.user.domain.User;
+import com.nexters.phochak.user.domain.UserRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

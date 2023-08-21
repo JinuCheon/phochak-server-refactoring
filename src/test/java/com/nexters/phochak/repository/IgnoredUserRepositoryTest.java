@@ -1,10 +1,11 @@
 package com.nexters.phochak.repository;
 
-import com.nexters.phochak.domain.User;
 import com.nexters.phochak.ignore.domain.IgnoredUserRepository;
 import com.nexters.phochak.ignore.domain.IgnoredUsers;
 import com.nexters.phochak.ignore.domain.IgnoredUsersRelation;
 import com.nexters.phochak.specification.OAuthProviderEnum;
+import com.nexters.phochak.user.domain.User;
+import com.nexters.phochak.user.domain.UserRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -22,7 +23,8 @@ class IgnoredUserRepositoryTest {
 
     @Autowired
     IgnoredUserRepository ignoredUserRepository;
-    @Autowired UserRepository userRepository;
+    @Autowired
+    UserRepository userRepository;
 
     @Transactional
     @Test

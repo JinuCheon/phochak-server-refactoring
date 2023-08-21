@@ -3,7 +3,7 @@ package com.nexters.phochak.auth.aspect;
 import com.nexters.phochak.auth.application.JwtTokenServiceImpl;
 import com.nexters.phochak.common.exception.PhochakException;
 import com.nexters.phochak.common.exception.ResCode;
-import com.nexters.phochak.service.impl.UserServiceImpl;
+import com.nexters.phochak.user.application.UserServiceImpl;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;

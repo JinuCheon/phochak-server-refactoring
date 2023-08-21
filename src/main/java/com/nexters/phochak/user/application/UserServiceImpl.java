@@ -1,10 +1,9 @@
-package com.nexters.phochak.service.impl;
+package com.nexters.phochak.user.application;
 
 import com.nexters.phochak.auth.UserContext;
 import com.nexters.phochak.auth.application.OAuthService;
 import com.nexters.phochak.common.exception.PhochakException;
 import com.nexters.phochak.common.exception.ResCode;
-import com.nexters.phochak.domain.User;
 import com.nexters.phochak.dto.OAuthUserInformation;
 import com.nexters.phochak.dto.response.IgnoredUserResponseDto;
 import com.nexters.phochak.dto.response.UserCheckResponseDto;
@@ -13,10 +12,10 @@ import com.nexters.phochak.ignore.domain.IgnoredUserRepository;
 import com.nexters.phochak.ignore.domain.IgnoredUsers;
 import com.nexters.phochak.ignore.domain.IgnoredUsersRelation;
 import com.nexters.phochak.notification.application.NotificationService;
-import com.nexters.phochak.repository.UserRepository;
 import com.nexters.phochak.service.PostService;
-import com.nexters.phochak.service.UserService;
 import com.nexters.phochak.specification.OAuthProviderEnum;
+import com.nexters.phochak.user.domain.User;
+import com.nexters.phochak.user.domain.UserRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.dao.DataIntegrityViolationException;

@@ -4,7 +4,7 @@ import com.nexters.phochak.auth.UserContext;
 import com.nexters.phochak.auth.annotation.Auth;
 import com.nexters.phochak.dto.response.CommonResponse;
 import com.nexters.phochak.dto.response.IgnoredUserResponseDto;
-import com.nexters.phochak.service.UserService;
+import com.nexters.phochak.user.application.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;

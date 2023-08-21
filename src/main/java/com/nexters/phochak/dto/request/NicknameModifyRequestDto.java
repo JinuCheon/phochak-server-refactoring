@@ -1,6 +1,6 @@
 package com.nexters.phochak.dto.request;
 
-import com.nexters.phochak.domain.User;
+import com.nexters.phochak.user.domain.User;
 import lombok.Getter;
 
 import javax.validation.constraints.NotNull;

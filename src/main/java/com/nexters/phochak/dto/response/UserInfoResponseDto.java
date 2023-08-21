@@ -1,6 +1,6 @@
 package com.nexters.phochak.dto.response;
 
-import com.nexters.phochak.domain.User;
+import com.nexters.phochak.user.domain.User;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

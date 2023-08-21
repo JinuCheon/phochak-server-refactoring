@@ -1,6 +1,6 @@
 package com.nexters.phochak.ignore.domain;
 
-import com.nexters.phochak.domain.User;
+import com.nexters.phochak.user.domain.User;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

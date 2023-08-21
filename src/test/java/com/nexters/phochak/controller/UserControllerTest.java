@@ -2,13 +2,13 @@ package com.nexters.phochak.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.nexters.phochak.auth.application.JwtTokenService;
-import com.nexters.phochak.auth.presentation.UserController;
 import com.nexters.phochak.docs.RestDocs;
 import com.nexters.phochak.dto.response.IgnoredUserResponseDto;
 import com.nexters.phochak.dto.response.JwtResponseDto;
 import com.nexters.phochak.dto.response.UserCheckResponseDto;
 import com.nexters.phochak.dto.response.UserInfoResponseDto;
-import com.nexters.phochak.service.UserService;
+import com.nexters.phochak.user.application.UserService;
+import com.nexters.phochak.user.presentation.UserController;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
