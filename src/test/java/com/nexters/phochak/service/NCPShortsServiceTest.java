@@ -5,6 +5,7 @@ import com.nexters.phochak.domain.Post;
 import com.nexters.phochak.domain.Shorts;
 import com.nexters.phochak.domain.User;
 import com.nexters.phochak.dto.EncodingCallbackRequestDto;
+import com.nexters.phochak.notification.application.NotificationService;
 import com.nexters.phochak.repository.ShortsRepository;
 import com.nexters.phochak.service.impl.NCPShortsService;
 import com.nexters.phochak.specification.PostCategoryEnum;

@@ -1,6 +1,7 @@
-package com.nexters.phochak.domain;
+package com.nexters.phochak.notification.domain;
 
 import com.nexters.phochak.common.domain.BaseTime;
+import com.nexters.phochak.domain.User;
 import lombok.Builder;
 import lombok.Getter;
 

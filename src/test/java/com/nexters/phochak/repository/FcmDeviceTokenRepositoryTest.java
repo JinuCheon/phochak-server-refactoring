@@ -1,9 +1,10 @@
 package com.nexters.phochak.repository;
 
-import com.nexters.phochak.domain.FcmDeviceToken;
 import com.nexters.phochak.domain.Post;
 import com.nexters.phochak.domain.Shorts;
 import com.nexters.phochak.domain.User;
+import com.nexters.phochak.notification.domain.FcmDeviceToken;
+import com.nexters.phochak.notification.domain.FcmDeviceTokenRepository;
 import com.nexters.phochak.specification.OAuthProviderEnum;
 import com.nexters.phochak.specification.PostCategoryEnum;
 import org.assertj.core.api.Assertions;

@@ -1,6 +1,5 @@
-package com.nexters.phochak.repository;
+package com.nexters.phochak.notification.domain;
 
-import com.nexters.phochak.domain.FcmDeviceToken;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

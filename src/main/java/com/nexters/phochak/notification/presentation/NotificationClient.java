@@ -1,4 +1,4 @@
-package com.nexters.phochak.client;
+package com.nexters.phochak.notification.presentation;
 
 import com.nexters.phochak.dto.NotificationFormDto;
 

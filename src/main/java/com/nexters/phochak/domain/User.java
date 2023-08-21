@@ -1,6 +1,7 @@
 package com.nexters.phochak.domain;
 
 import com.nexters.phochak.common.domain.BaseTime;
+import com.nexters.phochak.notification.domain.FcmDeviceToken;
 import com.nexters.phochak.specification.OAuthProviderEnum;
 import lombok.Builder;
 import lombok.Getter;
