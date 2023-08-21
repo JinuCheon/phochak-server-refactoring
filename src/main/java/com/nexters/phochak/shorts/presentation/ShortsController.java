@@ -1,6 +1,6 @@
 package com.nexters.phochak.shorts.presentation;
 
-import com.nexters.phochak.dto.EncodingCallbackRequestDto;
+import com.nexters.phochak.shorts.EncodingCallbackRequestDto;
 import com.nexters.phochak.shorts.application.ShortsService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

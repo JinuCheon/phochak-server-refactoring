@@ -1,9 +1,9 @@
 package com.nexters.phochak.controller;
 
+import com.nexters.phochak.auth.JwtResponseDto;
 import com.nexters.phochak.auth.application.JwtTokenService;
-import com.nexters.phochak.auth.presentation.v2.AuthV2Controller;
+import com.nexters.phochak.auth.presentation.AuthController;
 import com.nexters.phochak.docs.RestDocs;
-import com.nexters.phochak.dto.response.JwtResponseDto;
 import com.nexters.phochak.user.application.UserService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -35,7 +35,7 @@ class UserV2ControllerTest extends RestDocs {
     JwtTokenService jwtTokenService;
 
     @InjectMocks
-    AuthV2Controller userV2Controller;
+    AuthController userV2Controller;
     MockMvc mockMvc;
 
     @BeforeEach

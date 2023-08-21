@@ -1,6 +1,6 @@
 package com.nexters.phochak.notification.presentation;
 
-import com.nexters.phochak.dto.NotificationFormDto;
+import com.nexters.phochak.notification.NotificationFormDto;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;

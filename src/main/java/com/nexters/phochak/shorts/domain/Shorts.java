@@ -1,7 +1,6 @@
 package com.nexters.phochak.shorts.domain;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.nexters.phochak.specification.ShortsStateEnum;
 import lombok.Builder;
 import lombok.Getter;
 

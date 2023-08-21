@@ -16,7 +16,7 @@ import org.springframework.util.StringUtils;
 
 import javax.servlet.http.HttpServletRequest;
 
-import static com.nexters.phochak.dto.TokenDto.TOKEN_TYPE;
+import static com.nexters.phochak.auth.TokenDto.TOKEN_TYPE;
 
 @Slf4j
 @RequiredArgsConstructor

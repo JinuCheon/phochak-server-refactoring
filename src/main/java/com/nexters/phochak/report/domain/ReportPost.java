@@ -1,7 +1,7 @@
 package com.nexters.phochak.report.domain;
 
 import com.nexters.phochak.common.domain.BaseTime;
-import com.nexters.phochak.domain.Post;
+import com.nexters.phochak.post.domain.Post;
 import com.nexters.phochak.user.domain.User;
 import lombok.Builder;
 import lombok.Getter;

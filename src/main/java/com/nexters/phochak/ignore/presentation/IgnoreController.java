@@ -2,8 +2,8 @@ package com.nexters.phochak.ignore.presentation;
 
 import com.nexters.phochak.auth.UserContext;
 import com.nexters.phochak.auth.annotation.Auth;
-import com.nexters.phochak.dto.response.CommonResponse;
-import com.nexters.phochak.dto.response.IgnoredUserResponseDto;
+import com.nexters.phochak.ignore.IgnoredUserResponseDto;
+import com.nexters.phochak.post.CommonResponse;
 import com.nexters.phochak.user.application.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.DeleteMapping;

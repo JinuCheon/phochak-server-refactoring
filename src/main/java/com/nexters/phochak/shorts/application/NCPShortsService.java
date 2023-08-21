@@ -1,12 +1,12 @@
 package com.nexters.phochak.shorts.application;
 
 import com.nexters.phochak.common.config.property.NCPStorageProperties;
-import com.nexters.phochak.domain.Post;
-import com.nexters.phochak.dto.EncodingCallbackRequestDto;
 import com.nexters.phochak.notification.application.NotificationService;
+import com.nexters.phochak.post.domain.Post;
+import com.nexters.phochak.shorts.EncodingCallbackRequestDto;
 import com.nexters.phochak.shorts.domain.Shorts;
 import com.nexters.phochak.shorts.domain.ShortsRepository;
-import com.nexters.phochak.specification.ShortsStateEnum;
+import com.nexters.phochak.shorts.domain.ShortsStateEnum;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

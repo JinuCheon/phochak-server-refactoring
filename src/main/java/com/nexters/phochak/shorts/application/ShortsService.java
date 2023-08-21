@@ -1,7 +1,7 @@
 package com.nexters.phochak.shorts.application;
 
-import com.nexters.phochak.domain.Post;
-import com.nexters.phochak.dto.EncodingCallbackRequestDto;
+import com.nexters.phochak.post.domain.Post;
+import com.nexters.phochak.shorts.EncodingCallbackRequestDto;
 
 public interface ShortsService {
 

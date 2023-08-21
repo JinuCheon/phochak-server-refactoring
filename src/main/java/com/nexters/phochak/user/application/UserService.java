@@ -1,8 +1,8 @@
 package com.nexters.phochak.user.application;
 
-import com.nexters.phochak.dto.response.IgnoredUserResponseDto;
-import com.nexters.phochak.dto.response.UserCheckResponseDto;
-import com.nexters.phochak.dto.response.UserInfoResponseDto;
+import com.nexters.phochak.ignore.IgnoredUserResponseDto;
+import com.nexters.phochak.user.UserCheckResponseDto;
+import com.nexters.phochak.user.UserInfoResponseDto;
 
 import java.util.List;
 

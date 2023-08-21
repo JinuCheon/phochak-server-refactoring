@@ -1,7 +1,7 @@
 package com.nexters.phochak.auth.application;
 
-import com.nexters.phochak.dto.OAuthUserInformation;
-import com.nexters.phochak.specification.OAuthProviderEnum;
+import com.nexters.phochak.auth.OAuthUserInformation;
+import com.nexters.phochak.user.domain.OAuthProviderEnum;
 
 public interface OAuthService {
     OAuthProviderEnum getOAuthProvider();

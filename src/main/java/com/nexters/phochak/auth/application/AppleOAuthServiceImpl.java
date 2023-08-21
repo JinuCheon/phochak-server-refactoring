@@ -2,13 +2,12 @@ package com.nexters.phochak.auth.application;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.nexters.phochak.auth.AppleUserInformation;
+import com.nexters.phochak.auth.OAuthUserInformation;
 import com.nexters.phochak.auth.presentation.AppleAuthKeyFeignClient;
 import com.nexters.phochak.common.exception.PhochakException;
 import com.nexters.phochak.common.exception.ResCode;
-import com.nexters.phochak.dto.AppleUserInformation;
-import com.nexters.phochak.dto.OAuthUserInformation;
-import com.nexters.phochak.dto.jwt.Keys;
-import com.nexters.phochak.specification.OAuthProviderEnum;
+import com.nexters.phochak.user.domain.OAuthProviderEnum;
 import com.nimbusds.jose.JOSEException;
 import com.nimbusds.jose.crypto.RSASSAVerifier;
 import com.nimbusds.jose.jwk.JWK;

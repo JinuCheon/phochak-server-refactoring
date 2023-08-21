@@ -1,14 +1,14 @@
 package com.nexters.phochak.service;
 
 import com.nexters.phochak.common.config.property.NCPStorageProperties;
-import com.nexters.phochak.domain.Post;
-import com.nexters.phochak.dto.EncodingCallbackRequestDto;
 import com.nexters.phochak.notification.application.NotificationService;
+import com.nexters.phochak.post.domain.Post;
+import com.nexters.phochak.post.domain.PostCategoryEnum;
+import com.nexters.phochak.shorts.EncodingCallbackRequestDto;
 import com.nexters.phochak.shorts.application.NCPShortsService;
 import com.nexters.phochak.shorts.domain.Shorts;
 import com.nexters.phochak.shorts.domain.ShortsRepository;
-import com.nexters.phochak.specification.PostCategoryEnum;
-import com.nexters.phochak.specification.ShortsStateEnum;
+import com.nexters.phochak.shorts.domain.ShortsStateEnum;
 import com.nexters.phochak.user.domain.User;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;

@@ -2,11 +2,11 @@ package com.nexters.phochak.report.application;
 
 import com.nexters.phochak.common.exception.PhochakException;
 import com.nexters.phochak.common.exception.ResCode;
-import com.nexters.phochak.domain.Post;
+import com.nexters.phochak.post.application.ReportNotifyService;
+import com.nexters.phochak.post.domain.Post;
+import com.nexters.phochak.post.domain.PostRepository;
 import com.nexters.phochak.report.domain.ReportPost;
 import com.nexters.phochak.report.domain.ReportPostRepository;
-import com.nexters.phochak.repository.PostRepository;
-import com.nexters.phochak.service.NotifyService;
 import com.nexters.phochak.user.domain.User;
 import com.nexters.phochak.user.domain.UserRepository;
 import lombok.RequiredArgsConstructor;
@@ -19,7 +19,7 @@ import org.springframework.transaction.annotation.Transactional;
 public class ReportPostServiceImpl implements ReportPostService {
     private final UserRepository userRepository;
     private final PostRepository postRepository;
-    private final NotifyService notifyService;
+    private final ReportNotifyService reportNotifyService;
     private final ReportPostRepository reportPostRepository;
 
     @Override
@@ -41,6 +41,6 @@ public class ReportPostServiceImpl implements ReportPostService {
         post.blindPostIfRequired(reportCount);
 
         // 슬랙알림 전송
-        notifyService.notifyReportedPost(postId, userId, reportCount);
+        reportNotifyService.notifyReportedPost(postId, userId, reportCount);
     }
 }

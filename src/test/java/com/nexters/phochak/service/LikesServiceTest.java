@@ -1,11 +1,11 @@
 package com.nexters.phochak.service;
 
 import com.nexters.phochak.common.exception.PhochakException;
-import com.nexters.phochak.domain.Likes;
-import com.nexters.phochak.domain.Post;
-import com.nexters.phochak.repository.LikesRepository;
-import com.nexters.phochak.repository.PostRepository;
-import com.nexters.phochak.service.impl.LikeServiceImpl;
+import com.nexters.phochak.likes.application.LikeServiceImpl;
+import com.nexters.phochak.likes.domain.Likes;
+import com.nexters.phochak.likes.domain.LikesRepository;
+import com.nexters.phochak.post.domain.Post;
+import com.nexters.phochak.post.domain.PostRepository;
 import com.nexters.phochak.user.domain.User;
 import com.nexters.phochak.user.domain.UserRepository;
 import org.junit.jupiter.api.DisplayName;

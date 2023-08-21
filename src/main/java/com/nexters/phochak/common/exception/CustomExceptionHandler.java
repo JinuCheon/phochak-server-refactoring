@@ -1,6 +1,6 @@
 package com.nexters.phochak.common.exception;
 
-import com.nexters.phochak.dto.response.CommonResponse;
+import com.nexters.phochak.post.CommonResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

@@ -1,8 +1,8 @@
 package com.nexters.phochak.integration;
 
-import com.nexters.phochak.service.PostService;
-import com.nexters.phochak.specification.OAuthProviderEnum;
+import com.nexters.phochak.post.application.PostService;
 import com.nexters.phochak.user.application.UserService;
+import com.nexters.phochak.user.domain.OAuthProviderEnum;
 import com.nexters.phochak.user.domain.User;
 import com.nexters.phochak.user.domain.UserRepository;
 import org.junit.jupiter.api.BeforeEach;

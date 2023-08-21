@@ -1,19 +1,19 @@
 package com.nexters.phochak.user.application;
 
+import com.nexters.phochak.auth.OAuthUserInformation;
 import com.nexters.phochak.auth.UserContext;
 import com.nexters.phochak.auth.application.OAuthService;
 import com.nexters.phochak.common.exception.PhochakException;
 import com.nexters.phochak.common.exception.ResCode;
-import com.nexters.phochak.dto.OAuthUserInformation;
-import com.nexters.phochak.dto.response.IgnoredUserResponseDto;
-import com.nexters.phochak.dto.response.UserCheckResponseDto;
-import com.nexters.phochak.dto.response.UserInfoResponseDto;
+import com.nexters.phochak.ignore.IgnoredUserResponseDto;
 import com.nexters.phochak.ignore.domain.IgnoredUserRepository;
 import com.nexters.phochak.ignore.domain.IgnoredUsers;
 import com.nexters.phochak.ignore.domain.IgnoredUsersRelation;
 import com.nexters.phochak.notification.application.NotificationService;
-import com.nexters.phochak.service.PostService;
-import com.nexters.phochak.specification.OAuthProviderEnum;
+import com.nexters.phochak.post.application.PostService;
+import com.nexters.phochak.user.UserCheckResponseDto;
+import com.nexters.phochak.user.UserInfoResponseDto;
+import com.nexters.phochak.user.domain.OAuthProviderEnum;
 import com.nexters.phochak.user.domain.User;
 import com.nexters.phochak.user.domain.UserRepository;
 import lombok.RequiredArgsConstructor;

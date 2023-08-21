@@ -1,8 +1,8 @@
 package com.nexters.phochak.auth.application;
 
-import com.nexters.phochak.dto.TokenDto;
-import com.nexters.phochak.dto.request.ReissueTokenRequestDto;
-import com.nexters.phochak.dto.response.JwtResponseDto;
+import com.nexters.phochak.auth.JwtResponseDto;
+import com.nexters.phochak.auth.ReissueTokenRequestDto;
+import com.nexters.phochak.auth.TokenDto;
 
 public interface JwtTokenService {
     /**

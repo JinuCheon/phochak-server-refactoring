@@ -1,16 +1,16 @@
 package com.nexters.phochak.controller;
 
 import com.nexters.phochak.docs.RestDocs;
-import com.nexters.phochak.dto.PostFetchDto.PostShortsInformation;
-import com.nexters.phochak.dto.PostFetchDto.PostUserInformation;
-import com.nexters.phochak.dto.request.CustomCursor;
-import com.nexters.phochak.dto.request.PostFilter;
-import com.nexters.phochak.dto.response.PostPageResponseDto;
-import com.nexters.phochak.post.PostController;
-import com.nexters.phochak.service.PostService;
-import com.nexters.phochak.specification.PostCategoryEnum;
-import com.nexters.phochak.specification.PostSortOption;
-import com.nexters.phochak.specification.ShortsStateEnum;
+import com.nexters.phochak.post.CustomCursor;
+import com.nexters.phochak.post.PostFetchDto.PostShortsInformation;
+import com.nexters.phochak.post.PostFetchDto.PostUserInformation;
+import com.nexters.phochak.post.PostFilter;
+import com.nexters.phochak.post.PostPageResponseDto;
+import com.nexters.phochak.post.application.PostService;
+import com.nexters.phochak.post.domain.PostCategoryEnum;
+import com.nexters.phochak.post.domain.PostSortOption;
+import com.nexters.phochak.post.presentation.PostController;
+import com.nexters.phochak.shorts.domain.ShortsStateEnum;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

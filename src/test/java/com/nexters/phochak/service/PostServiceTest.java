@@ -1,12 +1,12 @@
 package com.nexters.phochak.service;
 
-import com.nexters.phochak.client.StorageBucketClient;
 import com.nexters.phochak.common.exception.PhochakException;
 import com.nexters.phochak.common.exception.ResCode;
-import com.nexters.phochak.domain.Post;
-import com.nexters.phochak.dto.PostUploadKeyResponseDto;
-import com.nexters.phochak.repository.PostRepository;
-import com.nexters.phochak.service.impl.PostServiceImpl;
+import com.nexters.phochak.post.application.PostServiceImpl;
+import com.nexters.phochak.post.domain.Post;
+import com.nexters.phochak.post.domain.PostRepository;
+import com.nexters.phochak.shorts.PostUploadKeyResponseDto;
+import com.nexters.phochak.shorts.presentation.StorageBucketClient;
 import com.nexters.phochak.user.domain.User;
 import com.nexters.phochak.user.domain.UserRepository;
 import org.junit.jupiter.api.DisplayName;

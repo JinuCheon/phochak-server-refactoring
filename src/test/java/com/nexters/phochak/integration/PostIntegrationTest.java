@@ -1,10 +1,10 @@
 package com.nexters.phochak.integration;
 
 import com.nexters.phochak.common.exception.PhochakException;
-import com.nexters.phochak.domain.Post;
-import com.nexters.phochak.repository.PostRepository;
-import com.nexters.phochak.service.impl.PostServiceImpl;
-import com.nexters.phochak.specification.PostCategoryEnum;
+import com.nexters.phochak.post.application.PostServiceImpl;
+import com.nexters.phochak.post.domain.Post;
+import com.nexters.phochak.post.domain.PostCategoryEnum;
+import com.nexters.phochak.post.domain.PostRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

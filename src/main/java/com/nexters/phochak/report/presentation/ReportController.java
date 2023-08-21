@@ -2,7 +2,7 @@ package com.nexters.phochak.report.presentation;
 
 import com.nexters.phochak.auth.UserContext;
 import com.nexters.phochak.auth.annotation.Auth;
-import com.nexters.phochak.dto.response.CommonResponse;
+import com.nexters.phochak.post.CommonResponse;
 import com.nexters.phochak.report.application.ReportPostService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PathVariable;

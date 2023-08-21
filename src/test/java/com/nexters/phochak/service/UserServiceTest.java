@@ -1,14 +1,14 @@
 package com.nexters.phochak.service;
 
+import com.nexters.phochak.auth.KakaoUserInformation;
+import com.nexters.phochak.auth.TokenDto;
 import com.nexters.phochak.auth.application.KakaoOAuthServiceImpl;
 import com.nexters.phochak.auth.application.OAuthService;
 import com.nexters.phochak.common.exception.PhochakException;
 import com.nexters.phochak.common.exception.ResCode;
-import com.nexters.phochak.dto.KakaoUserInformation;
-import com.nexters.phochak.dto.TokenDto;
-import com.nexters.phochak.dto.response.UserCheckResponseDto;
-import com.nexters.phochak.specification.OAuthProviderEnum;
+import com.nexters.phochak.user.UserCheckResponseDto;
 import com.nexters.phochak.user.application.UserServiceImpl;
+import com.nexters.phochak.user.domain.OAuthProviderEnum;
 import com.nexters.phochak.user.domain.User;
 import com.nexters.phochak.user.domain.UserRepository;
 import org.junit.jupiter.api.BeforeEach;
@@ -22,7 +22,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import java.util.Map;
 import java.util.Optional;
 
-import static com.nexters.phochak.dto.KakaoUserInformation.KakaoOAuthProperties;
+import static com.nexters.phochak.auth.KakaoUserInformation.KakaoOAuthProperties;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.mockito.ArgumentMatchers.any;

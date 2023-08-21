@@ -1,9 +1,9 @@
 package com.nexters.phochak.service;
 
 import com.nexters.phochak.common.exception.PhochakException;
-import com.nexters.phochak.domain.Post;
-import com.nexters.phochak.repository.HashtagRepository;
-import com.nexters.phochak.service.impl.HashtagServiceImpl;
+import com.nexters.phochak.hashtag.application.HashtagServiceImpl;
+import com.nexters.phochak.hashtag.domain.HashtagRepository;
+import com.nexters.phochak.post.domain.Post;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
