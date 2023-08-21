@@ -1,4 +1,4 @@
-package com.nexters.phochak.repository;
+package com.nexters.phochak.auth.domain;
 
 public interface RefreshTokenRepository {
 

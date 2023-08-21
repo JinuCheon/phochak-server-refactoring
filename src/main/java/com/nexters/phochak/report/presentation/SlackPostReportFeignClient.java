@@ -1,4 +1,4 @@
-package com.nexters.phochak.client;
+package com.nexters.phochak.report.presentation;
 
 import com.nexters.phochak.dto.SlackMessageFormDto;
 import org.springframework.cloud.openfeign.FeignClient;

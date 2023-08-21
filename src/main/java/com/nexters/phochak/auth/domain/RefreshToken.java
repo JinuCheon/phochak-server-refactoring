@@ -1,4 +1,4 @@
-package com.nexters.phochak.domain;
+package com.nexters.phochak.auth.domain;
 
 import lombok.Builder;
 import lombok.NoArgsConstructor;

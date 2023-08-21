@@ -1,5 +1,6 @@
 package com.nexters.phochak.repository;
 
+import com.nexters.phochak.auth.domain.RefreshTokenRepository;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -13,7 +14,8 @@ import org.springframework.transaction.annotation.Transactional;
 @Transactional
 class RedisRefreshTokenRepositoryTest {
 
-    @Autowired RefreshTokenRepository refreshTokenRepository;
+    @Autowired
+    RefreshTokenRepository refreshTokenRepository;
 
     @Test
     @DisplayName("Redis 데이터 저장 및 조회")

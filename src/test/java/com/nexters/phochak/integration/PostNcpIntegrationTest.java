@@ -2,7 +2,6 @@ package com.nexters.phochak.integration;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.nexters.phochak.auth.application.JwtTokenServiceImpl;
-import com.nexters.phochak.client.SlackPostReportFeignClient;
 import com.nexters.phochak.client.impl.NCPStorageClient;
 import com.nexters.phochak.common.exception.CustomExceptionHandler;
 import com.nexters.phochak.controller.PostController;
@@ -13,6 +12,7 @@ import com.nexters.phochak.domain.Shorts;
 import com.nexters.phochak.domain.User;
 import com.nexters.phochak.dto.TokenDto;
 import com.nexters.phochak.report.domain.ReportPostRepository;
+import com.nexters.phochak.report.presentation.SlackPostReportFeignClient;
 import com.nexters.phochak.repository.HashtagRepository;
 import com.nexters.phochak.repository.PostRepository;
 import com.nexters.phochak.repository.ShortsRepository;
