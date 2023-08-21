@@ -5,7 +5,7 @@ import com.nexters.phochak.exception.PhochakException;
 import com.nexters.phochak.exception.ResCode;
 import com.nexters.phochak.service.JwtTokenService;
 import com.nexters.phochak.service.UserService;
-import com.nexters.phochak.service.impl.JwtTokenServiceImpl;
+import com.nexters.phochak.auth.application.JwtTokenServiceImpl;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;

@@ -1,8 +1,8 @@
-package com.nexters.phochak.service.impl;
+package com.nexters.phochak.auth.application;
 
 import com.nexters.phochak.client.KakaoInformationFeignClient;
 import com.nexters.phochak.dto.OAuthUserInformation;
-import com.nexters.phochak.service.OAuthService;
+import com.nexters.phochak.auth.application.OAuthService;
 import com.nexters.phochak.specification.OAuthProviderEnum;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

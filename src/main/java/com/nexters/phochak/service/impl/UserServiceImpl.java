@@ -13,7 +13,7 @@ import com.nexters.phochak.exception.ResCode;
 import com.nexters.phochak.repository.IgnoredUserRepository;
 import com.nexters.phochak.repository.UserRepository;
 import com.nexters.phochak.service.NotificationService;
-import com.nexters.phochak.service.OAuthService;
+import com.nexters.phochak.auth.application.OAuthService;
 import com.nexters.phochak.service.PostService;
 import com.nexters.phochak.service.UserService;
 import com.nexters.phochak.specification.OAuthProviderEnum;

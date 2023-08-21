@@ -3,11 +3,10 @@ package com.nexters.phochak.integration;
 import com.nexters.phochak.domain.User;
 import com.nexters.phochak.dto.TokenDto;
 import com.nexters.phochak.repository.UserRepository;
-import com.nexters.phochak.service.impl.JwtTokenServiceImpl;
+import com.nexters.phochak.auth.application.JwtTokenServiceImpl;
 import com.nexters.phochak.specification.OAuthProviderEnum;
 import org.junit.jupiter.api.*;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.autoconfigure.restdocs.AutoConfigureRestDocs;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -15,7 +14,6 @@ import org.springframework.mock.web.MockMultipartFile;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.web.servlet.MockMvc;
 
-import java.io.File;
 import java.io.FileInputStream;
 
 import static com.nexters.phochak.auth.aspect.AuthAspect.AUTHORIZATION_HEADER;

@@ -1,6 +1,7 @@
 package com.nexters.phochak.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.nexters.phochak.auth.presentation.UserController;
 import com.nexters.phochak.docs.RestDocs;
 import com.nexters.phochak.dto.response.IgnoredUserResponseDto;
 import com.nexters.phochak.dto.response.UserCheckResponseDto;

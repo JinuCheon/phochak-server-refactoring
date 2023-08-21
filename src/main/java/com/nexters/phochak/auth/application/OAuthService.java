@@ -1,4 +1,4 @@
-package com.nexters.phochak.service;
+package com.nexters.phochak.auth.application;
 
 import com.nexters.phochak.dto.OAuthUserInformation;
 import com.nexters.phochak.specification.OAuthProviderEnum;

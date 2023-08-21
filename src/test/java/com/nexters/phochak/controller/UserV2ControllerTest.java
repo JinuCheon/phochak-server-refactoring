@@ -1,6 +1,6 @@
 package com.nexters.phochak.controller;
 
-import com.nexters.phochak.controller.v2.UserV2Controller;
+import com.nexters.phochak.auth.presentation.v2.UserV2Controller;
 import com.nexters.phochak.docs.RestDocs;
 import com.nexters.phochak.dto.response.JwtResponseDto;
 import com.nexters.phochak.service.JwtTokenService;
@@ -59,12 +59,12 @@ class UserV2ControllerTest extends RestDocs {
 
         mockMvc.perform(
                         RestDocumentationRequestBuilders
-                                .get("/v2/user/login/{provider}", provider)
+                                .get("/v2/auth/login/{provider}", provider)
                                 .param("token", token)
                                 .param("fcmDeviceToken", "TestFcmDeviceToken")
                 )
                 .andExpect(status().isOk())
-                .andDo(document("v2/user/login",
+                .andDo(document("v2/auth/login",
                         preprocessRequest(modifyUris().scheme("http").host("101.101.209.228").removePort(), prettyPrint()),
                         preprocessResponse(prettyPrint()),
                         pathParameters(

@@ -1,4 +1,4 @@
-package com.nexters.phochak.controller.v2;
+package com.nexters.phochak.auth.presentation.v2;
 
 import com.nexters.phochak.dto.request.LoginV2RequestDto;
 import com.nexters.phochak.dto.response.CommonResponse;
@@ -17,7 +17,7 @@ import javax.validation.Valid;
 
 @Slf4j
 @RequiredArgsConstructor
-@RequestMapping("/v2/user")
+@RequestMapping("/v2/auth")
 @RestController
 public class UserV2Controller {
     private final UserService userService;

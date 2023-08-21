@@ -16,7 +16,7 @@ import com.nexters.phochak.repository.PostRepository;
 import com.nexters.phochak.repository.ReportPostRepository;
 import com.nexters.phochak.repository.ShortsRepository;
 import com.nexters.phochak.repository.UserRepository;
-import com.nexters.phochak.service.impl.JwtTokenServiceImpl;
+import com.nexters.phochak.auth.application.JwtTokenServiceImpl;
 import com.nexters.phochak.specification.OAuthProviderEnum;
 import com.nexters.phochak.specification.PostCategoryEnum;
 import org.assertj.core.api.Assertions;

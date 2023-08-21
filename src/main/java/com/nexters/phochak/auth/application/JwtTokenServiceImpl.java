@@ -1,4 +1,4 @@
-package com.nexters.phochak.service.impl;
+package com.nexters.phochak.auth.application;
 
 import com.auth0.jwt.JWT;
 import com.nexters.phochak.global.config.property.JwtProperties;

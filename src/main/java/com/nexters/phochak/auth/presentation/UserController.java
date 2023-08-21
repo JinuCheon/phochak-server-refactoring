@@ -1,4 +1,4 @@
-package com.nexters.phochak.controller;
+package com.nexters.phochak.auth.presentation;
 
 import com.nexters.phochak.auth.UserContext;
 import com.nexters.phochak.auth.annotation.Auth;

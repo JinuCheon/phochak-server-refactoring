@@ -2,7 +2,7 @@ package com.nexters.phochak.integration;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.nexters.phochak.client.impl.NCPStorageClient;
-import com.nexters.phochak.controller.UserController;
+import com.nexters.phochak.auth.presentation.UserController;
 import com.nexters.phochak.docs.RestDocs;
 import com.nexters.phochak.domain.Hashtag;
 import com.nexters.phochak.domain.Post;

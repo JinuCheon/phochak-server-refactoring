@@ -1,4 +1,4 @@
-package com.nexters.phochak.client;
+package com.nexters.phochak.auth.presentation;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;

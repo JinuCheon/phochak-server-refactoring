@@ -1,4 +1,4 @@
-package com.nexters.phochak.client;
+package com.nexters.phochak.auth.presentation;
 
 import com.nexters.phochak.dto.KakaoAccessTokenResponseDto;
 import org.springframework.cloud.openfeign.FeignClient;
