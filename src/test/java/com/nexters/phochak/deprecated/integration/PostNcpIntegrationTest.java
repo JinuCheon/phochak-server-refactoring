@@ -1,7 +1,7 @@
 package com.nexters.phochak.deprecated.integration;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.nexters.phochak.auth.TokenDto;
+import com.nexters.phochak.auth.application.JwtTokenService;
 import com.nexters.phochak.auth.application.JwtTokenServiceImpl;
 import com.nexters.phochak.common.docs.RestDocs;
 import com.nexters.phochak.common.exception.CustomExceptionHandler;
@@ -99,8 +99,8 @@ class PostNcpIntegrationTest extends RestDocs {
                 .profileImgUrl(null)
                 .build();
         userRepository.save(user);
-        TokenDto tokenDto = jwtTokenService.generateToken(user.getId(), 999999999L);
-        testToken = TokenDto.TOKEN_TYPE + " " + tokenDto.getTokenString();
+        JwtTokenService.TokenVo tokenDto = jwtTokenService.generateToken(user.getId(), 999999999L);
+        testToken = JwtTokenService.TokenVo.TOKEN_TYPE + " " + tokenDto.getTokenString();
     }
 
     @Test

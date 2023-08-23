@@ -1,7 +1,6 @@
 package com.nexters.phochak.deprecated.integration;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.nexters.phochak.auth.TokenDto;
 import com.nexters.phochak.auth.application.JwtTokenService;
 import com.nexters.phochak.auth.domain.RefreshTokenRepository;
 import com.nexters.phochak.auth.presentation.LogoutRequestDto;
@@ -88,16 +87,16 @@ public class AuthIntegrationTest extends RestDocs {
         globalUserId = user.getId();
     }
 
-    private static String createTokenStringForResponse(TokenDto accessToken) {
-        return TokenDto.TOKEN_TYPE + " " + accessToken.getTokenString();
+    private static String createTokenStringForResponse(JwtTokenService.TokenVo accessToken) {
+        return JwtTokenService.TokenVo.TOKEN_TYPE + " " + accessToken.getTokenString();
     }
 
     @Test
     @DisplayName("토큰 재발급 API - 재발급 성공")
     void reissueToken() throws Exception {
         //given
-        TokenDto currentAT = jwtTokenService.generateToken(globalUserId, -1000L);
-        TokenDto currentRT = jwtTokenService.generateToken(globalUserId, 9999999999L);
+        JwtTokenService.TokenVo currentAT = jwtTokenService.generateToken(globalUserId, -1000L);
+        JwtTokenService.TokenVo currentRT = jwtTokenService.generateToken(globalUserId, 9999999999L);
 
         refreshTokenRepository.saveWithAccessToken(currentRT.getTokenString(), currentAT.getTokenString());
 
@@ -133,8 +132,8 @@ public class AuthIntegrationTest extends RestDocs {
     @DisplayName("토큰 재발급 API - Refresh Token이 만료된 경우, Expired Token 예외가 발생한다")
     void reissueToken_RTExpired_InvalidToken() throws Exception {
         //given
-        TokenDto currentAT = jwtTokenService.generateToken(globalUserId, -2000L);
-        TokenDto currentRT = jwtTokenService.generateToken(globalUserId, -1000L);
+        JwtTokenService.TokenVo currentAT = jwtTokenService.generateToken(globalUserId, -2000L);
+        JwtTokenService.TokenVo currentRT = jwtTokenService.generateToken(globalUserId, -1000L);
 
         refreshTokenRepository.saveWithAccessToken(currentRT.getTokenString(), currentAT.getTokenString());
 
@@ -154,8 +153,8 @@ public class AuthIntegrationTest extends RestDocs {
     @DisplayName("토큰 재발급 API - Access Token이 아직 만료되지 않은 경우, 탈취로 간주하고 Invalid Token 예외가 발생한다")
     void reissueToken_ATNotExpired_InvalidToken() throws Exception {
         //given
-        TokenDto currentAT = jwtTokenService.generateToken(globalUserId, 1000000000L);
-        TokenDto currentRT = jwtTokenService.generateToken(globalUserId, 9999999999L);
+        JwtTokenService.TokenVo currentAT = jwtTokenService.generateToken(globalUserId, 1000000000L);
+        JwtTokenService.TokenVo currentRT = jwtTokenService.generateToken(globalUserId, 9999999999L);
 
         refreshTokenRepository.saveWithAccessToken(currentRT.getTokenString(), currentAT.getTokenString());
 
@@ -175,13 +174,13 @@ public class AuthIntegrationTest extends RestDocs {
     @DisplayName("토큰 재발급 API - AT와 RT가 매치되지 않는 경우, 탈취로 간주하고 Invalid Token 예외가 발생한다")
     void reissueToken_ATRTNotMatched_InvalidToken() throws Exception {
         //given
-        TokenDto currentAT1 = jwtTokenService.generateToken(globalUserId, 1000000000L);
-        TokenDto currentRT1 = jwtTokenService.generateToken(globalUserId, 9999999999L);
+        JwtTokenService.TokenVo currentAT1 = jwtTokenService.generateToken(globalUserId, 1000000000L);
+        JwtTokenService.TokenVo currentRT1 = jwtTokenService.generateToken(globalUserId, 9999999999L);
 
         refreshTokenRepository.saveWithAccessToken(currentRT1.getTokenString(), currentAT1.getTokenString());
 
-        TokenDto currentAT2 = jwtTokenService.generateToken(globalUserId, 1000000000L);
-        TokenDto currentRT2 = jwtTokenService.generateToken(globalUserId, 9999999999L);
+        JwtTokenService.TokenVo currentAT2 = jwtTokenService.generateToken(globalUserId, 1000000000L);
+        JwtTokenService.TokenVo currentRT2 = jwtTokenService.generateToken(globalUserId, 9999999999L);
 
         refreshTokenRepository.saveWithAccessToken(currentRT2.getTokenString(), currentAT2.getTokenString());
 
@@ -202,8 +201,8 @@ public class AuthIntegrationTest extends RestDocs {
     @DisplayName("로그아웃 API - 로그아웃 성공")
     void logout_success() throws Exception {
         //given
-        TokenDto currentAT1 = jwtTokenService.generateToken(globalUserId, 1000000000L);
-        TokenDto currentRT1 = jwtTokenService.generateToken(globalUserId, 9999999999L);
+        JwtTokenService.TokenVo currentAT1 = jwtTokenService.generateToken(globalUserId, 1000000000L);
+        JwtTokenService.TokenVo currentRT1 = jwtTokenService.generateToken(globalUserId, 9999999999L);
 
         refreshTokenRepository.saveWithAccessToken(currentRT1.getTokenString(), currentAT1.getTokenString());
 
@@ -211,7 +210,7 @@ public class AuthIntegrationTest extends RestDocs {
 
         //when, then
         mockMvc.perform(post("/v1/user/logout")
-                        .header(AUTHORIZATION_HEADER, TokenDto.TOKEN_TYPE + " " + currentAT1.getTokenString())
+                        .header(AUTHORIZATION_HEADER, JwtTokenService.TokenVo.TOKEN_TYPE + " " + currentAT1.getTokenString())
                         .content(objectMapper.writeValueAsString(body))
                         .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
@@ -233,8 +232,8 @@ public class AuthIntegrationTest extends RestDocs {
     @DisplayName("회원탈퇴 API - 회원탈퇴 성공")
     void withdraw_success() throws Exception {
         //given
-        TokenDto currentAT = jwtTokenService.generateToken(globalUserId, 1000000000L);
-        TokenDto currentRT = jwtTokenService.generateToken(globalUserId, 9999999999L);
+        JwtTokenService.TokenVo currentAT = jwtTokenService.generateToken(globalUserId, 1000000000L);
+        JwtTokenService.TokenVo currentRT = jwtTokenService.generateToken(globalUserId, 9999999999L);
 
         User user = userRepository.findById(globalUserId).get();
 
@@ -263,7 +262,7 @@ public class AuthIntegrationTest extends RestDocs {
 
         //when, then
         mockMvc.perform(post("/v1/user/withdraw")
-                        .header(AUTHORIZATION_HEADER, TokenDto.TOKEN_TYPE + " " + currentAT.getTokenString())
+                        .header(AUTHORIZATION_HEADER, JwtTokenService.TokenVo.TOKEN_TYPE + " " + currentAT.getTokenString())
                         .content(objectMapper.writeValueAsString(body))
                         .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())

@@ -1,7 +1,7 @@
 package com.nexters.phochak.deprecated.service;
 
 import com.nexters.phochak.auth.KakaoUserInformation;
-import com.nexters.phochak.auth.TokenDto;
+import com.nexters.phochak.auth.application.JwtTokenService;
 import com.nexters.phochak.auth.application.KakaoOAuthServiceImpl;
 import com.nexters.phochak.auth.application.OAuthService;
 import com.nexters.phochak.common.exception.PhochakException;
@@ -48,7 +48,7 @@ class UserServiceTest {
     OAuthProviderEnum providerEnum = OAuthProviderEnum.KAKAO;
     KakaoOAuthProperties kakaoOAuthProperties;
     KakaoUserInformation userInformation;
-    TokenDto tokenDto;
+    JwtTokenService.TokenVo tokenVo;
 
 
     @BeforeEach
@@ -67,7 +67,7 @@ class UserServiceTest {
                 .properties(kakaoOAuthProperties)
                 .build();
 
-        tokenDto = new TokenDto(tokenString, expiresIn);
+        tokenVo = new JwtTokenService.TokenVo(tokenString, expiresIn);
     }
 
     @Test
