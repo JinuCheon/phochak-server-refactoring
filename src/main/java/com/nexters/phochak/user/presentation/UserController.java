@@ -2,6 +2,7 @@ package com.nexters.phochak.user.presentation;
 
 import com.nexters.phochak.auth.UserContext;
 import com.nexters.phochak.auth.annotation.Auth;
+import com.nexters.phochak.auth.application.AuthService;
 import com.nexters.phochak.auth.application.JwtTokenService;
 import com.nexters.phochak.auth.presentation.JwtResponseDto;
 import com.nexters.phochak.auth.presentation.LoginRequestDto;
@@ -33,12 +34,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/v1/user")
 @RestController
 public class UserController {
+    private final AuthService authService;
     private final UserService userService;
     private final JwtTokenService jwtTokenService;
 
     @GetMapping("/login/{provider}")
     public CommonResponse<JwtResponseDto> login(@PathVariable String provider, @Valid LoginRequestDto requestDto) {
-        Long loginUserId = userService.login(provider, requestDto);
+        Long loginUserId = authService.login(provider, requestDto);
         return new CommonResponse<>(jwtTokenService.issueToken( loginUserId));
     }
 

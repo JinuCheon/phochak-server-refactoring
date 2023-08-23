@@ -2,14 +2,10 @@ package com.nexters.phochak.deprecated.service;
 
 import com.nexters.phochak.auth.KakaoUserInformation;
 import com.nexters.phochak.auth.application.JwtTokenService;
-import com.nexters.phochak.auth.application.KakaoOAuthServiceImpl;
-import com.nexters.phochak.auth.application.OAuthService;
-import com.nexters.phochak.auth.presentation.LoginRequestDto;
 import com.nexters.phochak.common.exception.PhochakException;
 import com.nexters.phochak.common.exception.ResCode;
 import com.nexters.phochak.user.UserCheckResponseDto;
 import com.nexters.phochak.user.application.UserServiceImpl;
-import com.nexters.phochak.user.domain.OAuthProviderEnum;
 import com.nexters.phochak.user.domain.User;
 import com.nexters.phochak.user.domain.UserRepository;
 import org.junit.jupiter.api.BeforeEach;
@@ -21,7 +17,6 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import java.util.Map;
 import java.util.Optional;
 
 import static com.nexters.phochak.auth.KakaoUserInformation.KakaoOAuthProperties;
@@ -29,24 +24,16 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.BDDMockito.given;
-import static org.mockito.BDDMockito.then;
-import static org.mockito.Mockito.atLeastOnce;
-import static org.mockito.Mockito.never;
 
 @Disabled
 @ExtendWith(MockitoExtension.class)
 class UserServiceTest {
     @Mock
     UserRepository userRepository;
-    @Mock
-    Map<OAuthProviderEnum, OAuthService> oAuthServiceMap;
-    @Mock
-    KakaoOAuthServiceImpl kakaoOAuthService;
     @InjectMocks
     UserServiceImpl userService;
 
     MockUser user = new MockUser();
-    OAuthProviderEnum providerEnum = OAuthProviderEnum.KAKAO;
     KakaoOAuthProperties kakaoOAuthProperties;
     KakaoUserInformation userInformation;
     JwtTokenService.TokenVo tokenVo;
@@ -69,45 +56,6 @@ class UserServiceTest {
                 .build();
 
         tokenVo = new JwtTokenService.TokenVo(tokenString, expiresIn);
-    }
-
-    @Test
-    @DisplayName("로그인 시 신규 회원이면 회원가입이 호출된다")
-    void login_newUser() {
-        // given
-        final String token = "testToken";
-        final String providerId = "providerId";
-        final LoginRequestDto loginRequestDto = new LoginRequestDto(token, providerId);
-
-        given(oAuthServiceMap.get(providerEnum)).willReturn(kakaoOAuthService);
-        given(kakaoOAuthService.requestUserInformation(token)).willReturn(userInformation);
-        given(userRepository.findByProviderAndProviderId(providerEnum, providerId)).willReturn(Optional.empty());
-        given(userRepository.save(any())).willReturn(user);
-
-        // when
-        userService.login("kakao", loginRequestDto);
-
-        // then
-        then(userRepository).should(atLeastOnce()).save(any());
-    }
-
-    @Test
-    @DisplayName("로그인 시 기존 회원이면 회원가입이 호출되지 않는다")
-    void login_alreadyUser() {
-        // given
-        final String token = "testToken";
-        final String providerId = "providerId";
-        final LoginRequestDto loginRequestDto = new LoginRequestDto(token, providerId);
-
-        given(oAuthServiceMap.get(providerEnum)).willReturn(kakaoOAuthService);
-        given(kakaoOAuthService.requestUserInformation(token)).willReturn(userInformation);
-        given(userRepository.findByProviderAndProviderId(providerEnum, providerId)).willReturn(Optional.of(user));
-
-        // when
-        userService.login("kakao", loginRequestDto);
-
-        // then
-        then(userRepository).should(never()).save(any());
     }
 
     @Test
