@@ -1,10 +1,10 @@
 package com.nexters.phochak.auth.application;
 
 import com.auth0.jwt.JWT;
-import com.nexters.phochak.auth.JwtResponseDto;
-import com.nexters.phochak.auth.ReissueTokenRequestDto;
 import com.nexters.phochak.auth.TokenDto;
 import com.nexters.phochak.auth.domain.RefreshTokenRepository;
+import com.nexters.phochak.auth.presentation.JwtResponseDto;
+import com.nexters.phochak.auth.presentation.ReissueTokenRequestDto;
 import com.nexters.phochak.common.config.property.JwtProperties;
 import com.nexters.phochak.common.exception.PhochakException;
 import com.nexters.phochak.common.exception.ResCode;

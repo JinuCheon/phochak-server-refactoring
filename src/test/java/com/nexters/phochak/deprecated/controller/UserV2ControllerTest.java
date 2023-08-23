@@ -1,8 +1,8 @@
 package com.nexters.phochak.deprecated.controller;
 
-import com.nexters.phochak.auth.JwtResponseDto;
 import com.nexters.phochak.auth.application.JwtTokenService;
 import com.nexters.phochak.auth.presentation.AuthController;
+import com.nexters.phochak.auth.presentation.JwtResponseDto;
 import com.nexters.phochak.common.docs.RestDocs;
 import com.nexters.phochak.user.application.UserService;
 import org.junit.jupiter.api.BeforeEach;

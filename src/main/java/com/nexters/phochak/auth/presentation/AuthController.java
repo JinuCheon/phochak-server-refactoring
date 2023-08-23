@@ -1,6 +1,5 @@
 package com.nexters.phochak.auth.presentation;
 
-import com.nexters.phochak.auth.JwtResponseDto;
 import com.nexters.phochak.auth.application.JwtTokenService;
 import com.nexters.phochak.post.CommonResponse;
 import com.nexters.phochak.user.application.UserService;

@@ -1,11 +1,11 @@
 package com.nexters.phochak.deprecated.integration;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.nexters.phochak.auth.ReissueTokenRequestDto;
 import com.nexters.phochak.auth.TokenDto;
 import com.nexters.phochak.auth.application.JwtTokenService;
 import com.nexters.phochak.auth.domain.RefreshTokenRepository;
 import com.nexters.phochak.auth.presentation.LogoutRequestDto;
+import com.nexters.phochak.auth.presentation.ReissueTokenRequestDto;
 import com.nexters.phochak.auth.presentation.WithdrawRequestDto;
 import com.nexters.phochak.common.docs.RestDocs;
 import com.nexters.phochak.common.exception.CustomExceptionHandler;
