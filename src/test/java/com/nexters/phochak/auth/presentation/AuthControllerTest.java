@@ -1,6 +1,7 @@
 package com.nexters.phochak.auth.presentation;
 
 import com.nexters.phochak.auth.KakaoUserInformation;
+import com.nexters.phochak.common.DocumentGenerator;
 import com.nexters.phochak.common.RestDocsApiTest;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -10,6 +11,7 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.restdocs.RestDocumentationContextProvider;
 import org.springframework.restdocs.mockmvc.RestDocumentationRequestBuilders;
 import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.ResultActions;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
@@ -42,12 +44,13 @@ class AuthControllerTest extends RestDocsApiTest {
         );
         when(kakaoInformationFeignClient.call(any(), any())).thenReturn(kakaoRequestResponse);
 
-        mockMvc.perform(
+        final ResultActions response = mockMvc.perform(
                         RestDocumentationRequestBuilders
                                 .get("/v2/auth/login/{provider}", provider)
                                 .param("token", token)
                                 .param("fcmDeviceToken", "TestFcmDeviceToken"))
                 .andExpect(status().isOk());
+        DocumentGenerator.loginDocument(response);
     }
 
 
