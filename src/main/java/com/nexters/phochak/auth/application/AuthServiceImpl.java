@@ -32,11 +32,8 @@ public class AuthServiceImpl implements AuthService {
     public Long login(String provider, LoginRequestDto requestDto) {
         OAuthProviderEnum providerEnum = OAuthProviderEnum.codeOf(provider);
         OAuthService oAuthService = oAuthServiceMap.get(providerEnum);
-
         OAuthUserInformation userInformation = oAuthService.requestUserInformation(requestDto.token());
-
         User user = getOrCreateUser(userInformation);
-
         if (requestDto.fcmDeviceToken() != null) {
             notificationService.registryFcmDeviceToken(user, requestDto.fcmDeviceToken());
         }
@@ -48,9 +45,8 @@ public class AuthServiceImpl implements AuthService {
         Optional<User> target = userRepository.findByProviderAndProviderId(userInformation.getProvider(), userInformation.getProviderId());
 
         if (target.isPresent()) {
-            user = target.orElseThrow(() -> new PhochakException(ResCode.NOT_FOUND_USER));
             log.info("UserServiceImpl|login(기존 회원): {}", userInformation);
-
+            user = target.orElseThrow(() -> new PhochakException(ResCode.NOT_FOUND_USER));
         } else {
             log.info("UserServiceImpl|login(신규 회원): {}", userInformation);
             String nickname = generateInitialNickname();
