@@ -31,17 +31,20 @@ class AuthControllerTest extends RestDocsApiTest {
     }
 
     @Test
-    @DisplayName("인증 API - 카카오 로그인 / 회원가입 성공")
+    @DisplayName("인증 API - 카카오 OAuth 회원가입 성공")
     void login() throws Exception {
         final OAuthProviderEnum provider = OAuthProviderEnum.KAKAO;
-        final String providerId = "providerId";
+        final String providerId = "newProviderId";
         final KakaoUserInformation kakaoRequestResponse = mockKakaoUserInformation(providerId);
         when(kakaoInformationFeignClient.call(any(), any())).thenReturn(kakaoRequestResponse);
 
+        assertThat(userRepository.findByProviderAndProviderId(provider, providerId).isEmpty())
+                .isTrue();
+
         Scenario.login().requestAndCreateDocument(mockMvc);
 
-        assertThat(userRepository.findByProviderAndProviderId(provider, providerId))
-                .isPresent();
+        assertThat(userRepository.findByProviderAndProviderId(provider, providerId).isPresent())
+                .isTrue();
     }
 
     private static KakaoUserInformation mockKakaoUserInformation(final String providerId) {
