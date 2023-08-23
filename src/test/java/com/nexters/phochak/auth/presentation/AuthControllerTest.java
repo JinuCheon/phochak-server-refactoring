@@ -1,6 +1,7 @@
 package com.nexters.phochak.auth.presentation;
 
 import com.nexters.phochak.auth.KakaoUserInformation;
+import com.nexters.phochak.common.DocumentGenerator;
 import com.nexters.phochak.common.RestDocsApiTest;
 import com.nexters.phochak.common.Scenario;
 import com.nexters.phochak.user.domain.OAuthProviderEnum;
@@ -12,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.restdocs.RestDocumentationContextProvider;
 import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.ResultActions;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.ArgumentMatchers.any;
@@ -32,7 +34,7 @@ class AuthControllerTest extends RestDocsApiTest {
 
     @Test
     @DisplayName("인증 API - 카카오 OAuth 회원가입 성공")
-    void login() throws Exception {
+    void sign_up() throws Exception {
         final OAuthProviderEnum provider = OAuthProviderEnum.KAKAO;
         final String providerId = "newProviderId";
         final KakaoUserInformation kakaoRequestResponse = mockKakaoUserInformation(providerId);
@@ -41,7 +43,8 @@ class AuthControllerTest extends RestDocsApiTest {
         assertThat(userRepository.findByProviderAndProviderId(provider, providerId).isEmpty())
                 .isTrue();
 
-        Scenario.login().requestAndCreateDocument(mockMvc);
+        final ResultActions response = Scenario.login().request(mockMvc).getResponse();
+        DocumentGenerator.loginDocument(response);
 
         assertThat(userRepository.findByProviderAndProviderId(provider, providerId).isPresent())
                 .isTrue();

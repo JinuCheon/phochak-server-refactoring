@@ -1,6 +1,5 @@
 package com.nexters.phochak.auth.presentation.api;
 
-import com.nexters.phochak.common.DocumentGenerator;
 import com.nexters.phochak.common.Scenario;
 import org.springframework.restdocs.mockmvc.RestDocumentationRequestBuilders;
 import org.springframework.test.web.servlet.MockMvc;
@@ -22,24 +21,14 @@ public class LoginApi {
         return this;
     }
 
-    public Scenario request(final MockMvc mockMvc) throws Exception {
-        process(mockMvc);
-        return new Scenario();
-    }
-
-    public Scenario requestAndCreateDocument(final MockMvc mockMvc) throws Exception {
-        final ResultActions response = process(mockMvc);
-        DocumentGenerator.loginDocument(response);
-        return new Scenario();
-    }
-
-    private ResultActions process(final MockMvc mockMvc) throws Exception {
+    public Scenario.ScenarioStep request(final MockMvc mockMvc) throws Exception {
         final ResultActions response = mockMvc.perform(
                         RestDocumentationRequestBuilders
                                 .get("/v2/auth/login/{provider}", provider)
                                 .param("token", token)
                                 .param("fcmDeviceToken", "TestFcmDeviceToken"))
                 .andExpect(status().isOk());
-        return response;
+        return new Scenario.ScenarioStep(response);
     }
+
 }
