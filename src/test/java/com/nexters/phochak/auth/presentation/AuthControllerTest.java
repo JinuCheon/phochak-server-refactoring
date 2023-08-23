@@ -35,7 +35,7 @@ class AuthControllerTest extends RestDocsApiTest {
     void login() throws Exception {
         final OAuthProviderEnum provider = OAuthProviderEnum.KAKAO;
         final String providerId = "providerId";
-        final KakaoUserInformation kakaoRequestResponse = getKakaoUserInformation(providerId);
+        final KakaoUserInformation kakaoRequestResponse = mockKakaoUserInformation(providerId);
         when(kakaoInformationFeignClient.call(any(), any())).thenReturn(kakaoRequestResponse);
 
         Scenario.login().request(mockMvc);
@@ -44,22 +44,20 @@ class AuthControllerTest extends RestDocsApiTest {
                 .isPresent();
     }
 
-    private static KakaoUserInformation getKakaoUserInformation(final String providerId) {
-        final String mockConnectedAt = "connectedAt";
-        final String mockNickname = "nickname";
-
-        final String mockProfileImage = "profileImage";
-        final String mockThumbnailImage = "thumbnailImage";
-        final String mockKakaoAccount = "kakaoAccount";
-        final KakaoUserInformation kakaoRequestResponse = new KakaoUserInformation(
+    private static KakaoUserInformation mockKakaoUserInformation(final String providerId) {
+        final String connectedAt = "connectedAt";
+        final String nickname = "nickname";
+        final String profileImage = "profileImage";
+        final String thumbnailImage = "thumbnailImage";
+        final String kakaoAccount = "kakaoAccount";
+        return new KakaoUserInformation(
                 providerId,
-                mockConnectedAt,
-                mockNickname,
-                mockProfileImage,
-                mockThumbnailImage,
-                mockKakaoAccount
+                connectedAt,
+                nickname,
+                profileImage,
+                thumbnailImage,
+                kakaoAccount
         );
-        return kakaoRequestResponse;
     }
 
 
