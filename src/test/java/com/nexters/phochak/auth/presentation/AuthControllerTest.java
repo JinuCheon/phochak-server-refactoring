@@ -38,7 +38,7 @@ class AuthControllerTest extends RestDocsApiTest {
         final KakaoUserInformation kakaoRequestResponse = mockKakaoUserInformation(providerId);
         when(kakaoInformationFeignClient.call(any(), any())).thenReturn(kakaoRequestResponse);
 
-        Scenario.login().request(mockMvc);
+        Scenario.login().requestAndCreateDocument(mockMvc);
 
         assertThat(userRepository.findByProviderAndProviderId(provider, providerId))
                 .isPresent();

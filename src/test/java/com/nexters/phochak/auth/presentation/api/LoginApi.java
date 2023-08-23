@@ -23,13 +23,23 @@ public class LoginApi {
     }
 
     public Scenario request(final MockMvc mockMvc) throws Exception {
+        process(mockMvc);
+        return new Scenario();
+    }
+
+    public Scenario requestAndCreateDocument(final MockMvc mockMvc) throws Exception {
+        final ResultActions response = process(mockMvc);
+        DocumentGenerator.loginDocument(response);
+        return new Scenario();
+    }
+
+    private ResultActions process(final MockMvc mockMvc) throws Exception {
         final ResultActions response = mockMvc.perform(
                         RestDocumentationRequestBuilders
                                 .get("/v2/auth/login/{provider}", provider)
                                 .param("token", token)
                                 .param("fcmDeviceToken", "TestFcmDeviceToken"))
                 .andExpect(status().isOk());
-        DocumentGenerator.loginDocument(response);
-        return new Scenario();
+        return response;
     }
 }
