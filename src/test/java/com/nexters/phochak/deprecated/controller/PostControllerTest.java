@@ -1,6 +1,6 @@
 package com.nexters.phochak.deprecated.controller;
 
-import com.nexters.phochak.docs.RestDocs;
+import com.nexters.phochak.common.docs.RestDocs;
 import com.nexters.phochak.post.CustomCursor;
 import com.nexters.phochak.post.PostFetchDto.PostShortsInformation;
 import com.nexters.phochak.post.PostFetchDto.PostUserInformation;

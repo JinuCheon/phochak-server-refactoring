@@ -3,7 +3,7 @@ package com.nexters.phochak.deprecated.controller;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.nexters.phochak.auth.JwtResponseDto;
 import com.nexters.phochak.auth.application.JwtTokenService;
-import com.nexters.phochak.docs.RestDocs;
+import com.nexters.phochak.common.docs.RestDocs;
 import com.nexters.phochak.ignore.IgnoredUserResponseDto;
 import com.nexters.phochak.user.UserCheckResponseDto;
 import com.nexters.phochak.user.UserInfoResponseDto;
