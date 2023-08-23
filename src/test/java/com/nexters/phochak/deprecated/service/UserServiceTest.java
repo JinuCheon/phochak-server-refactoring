@@ -4,6 +4,7 @@ import com.nexters.phochak.auth.KakaoUserInformation;
 import com.nexters.phochak.auth.application.JwtTokenService;
 import com.nexters.phochak.auth.application.KakaoOAuthServiceImpl;
 import com.nexters.phochak.auth.application.OAuthService;
+import com.nexters.phochak.auth.presentation.LoginRequestDto;
 import com.nexters.phochak.common.exception.PhochakException;
 import com.nexters.phochak.common.exception.ResCode;
 import com.nexters.phochak.user.UserCheckResponseDto;
@@ -74,16 +75,17 @@ class UserServiceTest {
     @DisplayName("로그인 시 신규 회원이면 회원가입이 호출된다")
     void login_newUser() {
         // given
-        String code = "testCode";
-        String providerId = "testProviderId";
+        final String token = "testToken";
+        final String providerId = "providerId";
+        final LoginRequestDto loginRequestDto = new LoginRequestDto(token, providerId);
 
         given(oAuthServiceMap.get(providerEnum)).willReturn(kakaoOAuthService);
-        given(kakaoOAuthService.requestUserInformation(code)).willReturn(userInformation);
+        given(kakaoOAuthService.requestUserInformation(token)).willReturn(userInformation);
         given(userRepository.findByProviderAndProviderId(providerEnum, providerId)).willReturn(Optional.empty());
         given(userRepository.save(any())).willReturn(user);
 
         // when
-        userService.login("kakao", code);
+        userService.login("kakao", loginRequestDto);
 
         // then
         then(userRepository).should(atLeastOnce()).save(any());
@@ -93,15 +95,16 @@ class UserServiceTest {
     @DisplayName("로그인 시 기존 회원이면 회원가입이 호출되지 않는다")
     void login_alreadyUser() {
         // given
-        String code = "testCode";
-        String providerId = "testProviderId";
+        final String token = "testToken";
+        final String providerId = "providerId";
+        final LoginRequestDto loginRequestDto = new LoginRequestDto(token, providerId);
 
         given(oAuthServiceMap.get(providerEnum)).willReturn(kakaoOAuthService);
-        given(kakaoOAuthService.requestUserInformation(code)).willReturn(userInformation);
+        given(kakaoOAuthService.requestUserInformation(token)).willReturn(userInformation);
         given(userRepository.findByProviderAndProviderId(providerEnum, providerId)).willReturn(Optional.of(user));
 
         // when
-        userService.login("kakao", code);
+        userService.login("kakao", loginRequestDto);
 
         // then
         then(userRepository).should(never()).save(any());

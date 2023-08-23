@@ -1,5 +1,6 @@
 package com.nexters.phochak.user.application;
 
+import com.nexters.phochak.auth.presentation.LoginRequestDto;
 import com.nexters.phochak.ignore.IgnoredUserResponseDto;
 import com.nexters.phochak.user.UserCheckResponseDto;
 import com.nexters.phochak.user.UserInfoResponseDto;
@@ -12,11 +13,9 @@ public interface UserService {
      * OAuth 로그인을 진행한다.
      *
      * @param provider
-     * @param token
+     * @param requestDto
      */
-    Long login(String provider, String token);
-
-    Long login(String provider, String code, String FCMDeviceToken);
+    Long login(String provider, LoginRequestDto requestDto);
 
     /**
      * 해당 id의 유저 정보를 조회한다.

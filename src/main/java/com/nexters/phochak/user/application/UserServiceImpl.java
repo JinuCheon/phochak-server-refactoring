@@ -3,6 +3,7 @@ package com.nexters.phochak.user.application;
 import com.nexters.phochak.auth.OAuthUserInformation;
 import com.nexters.phochak.auth.UserContext;
 import com.nexters.phochak.auth.application.OAuthService;
+import com.nexters.phochak.auth.presentation.LoginRequestDto;
 import com.nexters.phochak.common.exception.PhochakException;
 import com.nexters.phochak.common.exception.ResCode;
 import com.nexters.phochak.ignore.IgnoredUserResponseDto;
@@ -40,27 +41,17 @@ public class UserServiceImpl implements UserService {
     private final NotificationService notificationService;
 
     @Override
-    public Long login(String provider, String code) {
+    public Long login(String provider, LoginRequestDto requestDto) {
         OAuthProviderEnum providerEnum = OAuthProviderEnum.codeOf(provider);
         OAuthService oAuthService = oAuthServiceMap.get(providerEnum);
 
-        OAuthUserInformation userInformation = oAuthService.requestUserInformation(code);
+        OAuthUserInformation userInformation = oAuthService.requestUserInformation(requestDto.token());
 
         User user = getOrCreateUser(userInformation);
 
-        return user.getId();
-    }
-
-    @Override
-    public Long login(String provider, String code, String fcmDeviceToken) {
-        OAuthProviderEnum providerEnum = OAuthProviderEnum.codeOf(provider);
-        OAuthService oAuthService = oAuthServiceMap.get(providerEnum);
-
-        OAuthUserInformation userInformation = oAuthService.requestUserInformation(code);
-
-        User user = getOrCreateUser(userInformation);
-
-        notificationService.registryFcmDeviceToken(user, fcmDeviceToken);
+        if (requestDto.fcmDeviceToken() != null) {
+            notificationService.registryFcmDeviceToken(user, requestDto.fcmDeviceToken());
+        }
         return user.getId();
     }
 
