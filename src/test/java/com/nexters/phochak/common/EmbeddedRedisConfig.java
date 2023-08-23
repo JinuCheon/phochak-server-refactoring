@@ -16,8 +16,8 @@ import java.io.InputStreamReader;
 @Configuration
 public class EmbeddedRedisConfig {
 
-    private int redisPort;
-    private String redisPassword;
+    private final int redisPort;
+    private final String redisPassword;
     private RedisServer redisServer;
 
     public EmbeddedRedisConfig(RedisProperties redisProperties) {
